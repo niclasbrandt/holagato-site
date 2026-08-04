@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LogoMark from '../components/LogoMark.astro';
 
 const services = [
 	{
@@ -41,10 +42,7 @@ const principles = [
 >
 	<header class="site-header">
 		<a class="logo" href="#top" aria-label="Hola Gato, back to top">
-			<svg viewBox="0 0 52 44" aria-hidden="true">
-				<path d="M8 16 5 3l14 8a28 28 0 0 1 14 0L47 3l-3 13c3 3 5 7 5 11 0 9-10 15-23 15S3 36 3 27c0-4 2-8 5-11Z"></path>
-				<path class="logo-face" d="M16 27h.01M36 27h.01M21 34c3 2 7 2 10 0"></path>
-			</svg>
+			<LogoMark />
 			<span>hola gato</span>
 		</a>
 		<nav aria-label="Main navigation">
@@ -76,11 +74,19 @@ const principles = [
 					<div class="approved">CLEAR<br />ENOUGH</div>
 				</div>
 				<svg class="hero-cat" viewBox="0 0 390 300" aria-hidden="true">
-					<path class="cat-body" d="M102 261c-11-42 4-78 47-98-14-47 5-90 45-112l30 43c19-2 35 1 51 8l48-32c22 38 22 77 0 111 12 23 10 57-5 80H102Z"></path>
-					<path class="cat-shadow" d="M113 258c45-22 83-23 119-3l8 6H113Z"></path>
-					<path class="cat-detail" d="m194 52 8 54M323 71l-40 45M176 162c8-12 19-15 32-7M271 157c11-6 22-3 29 8M235 183l13 5-9 10M205 213c23 12 46 12 68-2"></path>
-					<path class="cat-eye" d="M197 161h1M291 164h1"></path>
-					<path class="cat-detail whiskers" d="M191 190 93 173M190 202l-105 9M282 192l83-12M281 204l90 18"></path>
+					<path class="cat-tail" d="M303 264c49-2 73-24 68-53-3-19-17-29-31-25-13 4-16 18-8 28"></path>
+					<path class="cat-tail-fill" d="M303 264c49-2 73-24 68-53-3-19-17-29-31-25-13 4-16 18-8 28"></path>
+					<path class="cat-body" d="M99 272c-4-45 13-78 54-98-11-24-10-49 1-70l29-53 38 39c20-5 42-3 60 5l46-34 2 61c14 17 19 38 13 60 16 24 17 59 3 90H99Z"></path>
+					<path class="cat-ear" d="m171 93 13-27 22 25c-13 0-24 1-35 2Zm127 10 27-28 1 39c-8-5-17-9-28-11Z"></path>
+					<path class="cat-chest" d="M208 270c4-23 18-36 39-36 22 0 37 13 42 36"></path>
+					<path class="cat-muzzle" d="M217 186c7-8 17-10 28-4 10-5 20-3 27 5-1 20-10 31-27 31-18 0-27-11-28-32Z"></path>
+					<path class="cat-eye-socket" d="M179 151c5-13 20-18 33-11 8 5 11 14 7 23-5 12-20 16-32 9-8-4-11-13-8-21Zm91 5c4-12 17-18 29-13 10 4 15 13 12 23-4 12-17 18-29 13-10-4-15-13-12-23Z"></path>
+					<path class="cat-pupil" d="M202 145c5 1 8 6 7 12s-5 10-10 9-8-6-7-12 5-10 10-9Zm91 3c5 1 8 6 7 12s-5 10-10 9-8-6-7-12 5-10 10-9Z"></path>
+					<path class="cat-nose" d="m245 183-8 5 8 7 8-7Z"></path>
+					<path class="cat-detail" d="M245 195v5m0 0c-6 9-17 10-24 5m24-5c6 9 17 10 24 5M177 131c10-8 22-9 33-3m67 4c10-6 21-4 29 4"></path>
+					<path class="cat-detail whiskers" d="m215 187-102-17m100 29-109 7m171-16 79-15m-77 27 86 14"></path>
+					<path class="cat-freckles" d="M208 184h.01m-8 5h.01m89-1h.01m8 5h.01"></path>
+					<path class="cat-paws" d="M155 270c3-18 13-28 29-28s26 10 29 28m76 0c3-18 13-28 29-28 15 0 25 10 28 28m-162-27v17m134-17v17"></path>
 				</svg>
 				<div class="sticker">human<br />friendly<br /><b>✳</b></div>
 			</div>
@@ -110,11 +116,22 @@ const principles = [
 		</section>
 
 		<section class="manifesto section-space">
-			<div class="manifesto-cat" aria-hidden="true">
-				<span class="ear left"></span><span class="ear right"></span>
-				<span class="eye left">×</span><span class="eye right">×</span>
-				<span class="nose">●</span>
-			</div>
+			<svg class="manifesto-cat" viewBox="0 0 460 470" aria-hidden="true">
+				<path class="manifesto-tail" d="M102 453C45 431 24 382 45 347c14-24 43-29 61-13 16 14 13 39-3 49-14 9-31 1-32-13"></path>
+				<path class="manifesto-tail-fill" d="M102 453C45 431 24 382 45 347c14-24 43-29 61-13 16 14 13 39-3 49-14 9-31 1-32-13"></path>
+				<path class="manifesto-body" d="M72 470c3-76 19-124 56-151-22-42-24-93-8-134L94 38l98 74c24-7 51-7 76 0l98-74-26 147c16 41 14 92-8 134 37 27 53 75 56 151H72Z"></path>
+				<path class="manifesto-ear" d="m111 73 64 48-49 38Zm238 0-64 48 49 38Z"></path>
+				<path class="manifesto-chest" d="M179 470c4-63 22-95 51-95s47 32 51 95"></path>
+				<path class="manifesto-brow" d="M141 198c15-13 36-16 54-7m70 2c17-10 38-7 53 6"></path>
+				<path class="manifesto-glasses" d="M126 225c0-28 20-47 48-47s48 19 48 47-20 47-48 47-48-19-48-47Zm112 0c0-28 20-47 48-47s48 19 48 47-20 47-48 47-48-19-48-47Zm-16-7c5-5 11-7 16 0"></path>
+				<path class="manifesto-lens" d="M148 227c6-12 18-17 31-13 9 3 14 9 17 18m64 0c4-12 13-18 25-18 12 1 22 7 26 18"></path>
+				<path class="manifesto-pupil" d="M176 219v21m110-21v21"></path>
+				<path class="manifesto-muzzle" d="M194 280c10-10 23-10 36-2 13-8 26-8 36 2-1 27-13 40-36 40s-35-13-36-40Z"></path>
+				<path class="manifesto-nose" d="m230 277-10 7 10 9 10-9Z"></path>
+				<path class="manifesto-mouth" d="M230 293v7m0 0c-8 11-21 12-30 5m30-5c8 11 21 12 30 5"></path>
+				<path class="manifesto-whiskers" d="m190 281-104-18m102 35-108 8m190-25 104-18m-102 35 108 8"></path>
+				<path class="manifesto-paws" d="M121 470c3-34 20-53 48-53s45 19 48 53m26 0c3-34 20-53 48-53s45 19 48 53m-170-52v34m122-34v34"></path>
+			</svg>
 			<div class="manifesto-copy">
 				<p class="kicker light">My point of view</p>
 				<blockquote>“The best legal work doesn’t slow good ideas down. It gives them <em>somewhere to go.</em>”</blockquote>
@@ -204,8 +221,8 @@ const principles = [
 	</main>
 
 	<footer>
-		<a class="logo footer-logo" href="#top">
-			<svg viewBox="0 0 52 44" aria-hidden="true"><path d="M8 16 5 3l14 8a28 28 0 0 1 14 0L47 3l-3 13c3 3 5 7 5 11 0 9-10 15-23 15S3 36 3 27c0-4 2-8 5-11Z"></path></svg>
+		<a class="logo footer-logo" href="#top" aria-label="Hola Gato, back to top">
+			<LogoMark />
 			<span>hola gato</span>
 		</a>
 		<p>Legal consulting for curious companies.</p>
@@ -222,8 +239,8 @@ const principles = [
 
 	.site-header { width: min(100% - 48px, 1240px); height: 88px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 10; }
 	.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 22px; font-weight: 900; letter-spacing: -1.2px; }
-	.logo svg { width: 40px; fill: #ff6060; stroke: #760031; stroke-width: 2.5; overflow: visible; }
-	.logo-face { fill: none; stroke-linecap: round; stroke-width: 2.7; }
+	.logo :global(.logo-mark) { flex: 0 0 auto; transition: transform .22s ease; }
+	.logo:hover :global(.logo-mark) { transform: translateY(-2px) rotate(-4deg); }
 	nav { display: flex; align-items: center; gap: 34px; font-size: 14px; font-weight: 700; }
 	nav a { text-decoration: none; position: relative; }
 	nav a:not(.nav-cta)::after { content: ''; height: 2px; width: 0; background: #d51c39; position: absolute; bottom: -5px; left: 0; transition: width .2s ease; }
@@ -253,12 +270,21 @@ const principles = [
 	.orbit { position: absolute; border: 2px solid #d51c39; border-radius: 50%; z-index: 0; opacity: .7; }
 	.orbit-one { width: 98%; height: 53%; transform: rotate(34deg); }
 	.orbit-two { width: 95%; height: 42%; transform: rotate(-27deg); }
-	.hero-cat { width: 93%; position: absolute; bottom: 4%; right: -2%; z-index: 2; overflow: visible; }
+	.hero-cat { width: 95%; position: absolute; bottom: 3%; right: -3%; z-index: 2; overflow: visible; filter: drop-shadow(7px 9px 0 rgba(213, 28, 57, .18)); transition: transform .3s ease; }
+	.hero-art:hover .hero-cat { transform: translateY(-4px) rotate(.5deg); }
 	.cat-body { fill: #ff6060; stroke: #760031; stroke-width: 5; stroke-linejoin: round; }
-	.cat-shadow { fill: #d51c39; opacity: .25; }
+	.cat-tail, .cat-tail-fill { fill: none; stroke-linecap: round; }
+	.cat-tail { stroke: #760031; stroke-width: 30; }
+	.cat-tail-fill { stroke: #ff6060; stroke-width: 19; }
+	.cat-ear { fill: #feec41; stroke: #760031; stroke-width: 4; stroke-linejoin: round; }
+	.cat-chest { fill: #feec41; stroke: #760031; stroke-width: 5; stroke-linecap: round; }
+	.cat-muzzle { fill: #ff897e; }
+	.cat-eye-socket { fill: #fffaf3; stroke: #760031; stroke-width: 4; stroke-linejoin: round; }
+	.cat-pupil, .cat-nose { fill: #760031; }
 	.cat-detail { fill: none; stroke: #760031; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
-	.cat-eye { fill: none; stroke: #760031; stroke-width: 12; stroke-linecap: round; }
 	.whiskers { stroke-width: 3; }
+	.cat-freckles { fill: none; stroke: #760031; stroke-width: 5; stroke-linecap: round; }
+	.cat-paws { fill: none; stroke: #760031; stroke-width: 4; stroke-linecap: round; }
 	.legal-card { position: absolute; z-index: 3; width: 190px; height: 245px; background: white; border: 3px solid #760031; padding: 18px; transform: rotate(-8deg); left: 1%; bottom: 5%; box-shadow: 10px 10px 0 #d51c39; }
 	.card-top { display: flex; justify-content: space-between; font-size: 9px; font-weight: 900; letter-spacing: 1px; border-bottom: 2px solid #760031; padding-bottom: 10px; }
 	.card-lines { display: grid; gap: 10px; margin-top: 19px; }
@@ -287,15 +313,23 @@ const principles = [
 	.card-arrow { position: absolute; right: 28px; top: 28px; font-size: 30px; }
 
 	.manifesto { min-height: 610px; background: #760031; color: #fff; display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; padding-left: max(24px, calc((100vw - 1240px) / 2)); padding-right: max(24px, calc((100vw - 1240px) / 2)); overflow: hidden; }
-	.manifesto-cat { position: relative; align-self: end; width: 420px; height: 440px; border-radius: 48% 48% 0 0; background: #ff6060; border: 4px solid #fff; border-bottom: none; }
-	.manifesto-cat::after { content: ''; position: absolute; width: 70px; height: 25px; border-radius: 50%; border-bottom: 4px solid #760031; bottom: 123px; left: 176px; }
-	.manifesto-cat .ear { position: absolute; width: 140px; height: 150px; background: #ff6060; border: 4px solid #fff; transform: rotate(45deg); z-index: -1; top: -35px; }
-	.manifesto-cat .ear.left { left: 16px; }
-	.manifesto-cat .ear.right { right: 16px; }
-	.manifesto-cat .eye { position: absolute; font-size: 64px; font-family: Arial; color: #760031; top: 140px; }
-	.manifesto-cat .eye.left { left: 105px; }
-	.manifesto-cat .eye.right { right: 105px; }
-	.manifesto-cat .nose { position: absolute; left: 199px; top: 225px; color: #760031; }
+	.manifesto-cat { align-self: end; width: min(100%, 460px); height: auto; overflow: visible; filter: drop-shadow(-10px 10px 0 rgba(0, 0, 0, .16)); }
+	.manifesto-body { fill: #ff6060; stroke: #fffaf3; stroke-width: 6; stroke-linejoin: round; }
+	.manifesto-tail, .manifesto-tail-fill { fill: none; stroke-linecap: round; }
+	.manifesto-tail { stroke: #fffaf3; stroke-width: 34; }
+	.manifesto-tail-fill { stroke: #ff6060; stroke-width: 22; }
+	.manifesto-ear, .manifesto-chest { fill: #feec41; stroke: #760031; stroke-width: 5; stroke-linejoin: round; }
+	.manifesto-chest { stroke-linecap: round; }
+	.manifesto-glasses { fill: #fffaf3; stroke: #760031; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+	.manifesto-brow, .manifesto-lens, .manifesto-pupil, .manifesto-mouth, .manifesto-whiskers, .manifesto-paws { fill: none; stroke: #760031; stroke-linecap: round; stroke-linejoin: round; }
+	.manifesto-brow { stroke-width: 7; }
+	.manifesto-lens { stroke: #ff6060; stroke-width: 5; opacity: .65; }
+	.manifesto-pupil { stroke-width: 10; }
+	.manifesto-muzzle { fill: #ff897e; }
+	.manifesto-nose { fill: #760031; }
+	.manifesto-mouth { stroke-width: 5; }
+	.manifesto-whiskers { stroke-width: 4; }
+	.manifesto-paws { stroke-width: 5; }
 	.manifesto-copy { padding-left: 70px; }
 	.kicker.light { color: #feec41; }
 	.manifesto blockquote { font-size: clamp(42px, 5vw, 72px); line-height: 1.06; margin: 30px 0 0; max-width: 760px; }
@@ -350,7 +384,7 @@ const principles = [
 	footer { background: #760031; color: #fff; padding: 38px max(24px, calc((100vw - 1240px) / 2)); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; font-size: 12px; }
 	footer p:nth-child(2) { text-align: center; }
 	footer p:last-child { text-align: right; }
-	.footer-logo svg { fill: #ff6060; stroke: #fff; width: 34px; }
+	.footer-logo :global(.logo-mark) { --logo-ink: #fff; width: 36px; }
 
 	@media (max-width: 900px) {
 		nav a:not(.nav-cta) { display: none; }
@@ -370,7 +404,7 @@ const principles = [
 		.site-header, .section-shell { width: min(100% - 32px, 1240px); }
 		.site-header { height: 76px; }
 		.logo { font-size: 19px; }
-		.logo svg { width: 34px; }
+		.logo :global(.logo-mark) { width: 36px; }
 		.nav-cta { padding: 11px 14px; }
 		.hero { min-height: auto; padding-top: 70px; padding-bottom: 75px; }
 		h1 { font-size: clamp(58px, 19vw, 82px); }
@@ -389,13 +423,7 @@ const principles = [
 		.principle-list article { grid-template-columns: 50px 1fr; }
 		.principle-list article p { grid-column: 2; }
 		.manifesto { min-height: 730px; }
-		.manifesto-cat { width: 300px; height: 330px; }
-		.manifesto-cat .ear { width: 100px; height: 110px; }
-		.manifesto-cat .eye { top: 100px; font-size: 48px; }
-		.manifesto-cat .eye.left { left: 77px; }
-		.manifesto-cat .eye.right { right: 77px; }
-		.manifesto-cat .nose { left: 142px; top: 169px; }
-		.manifesto-cat::after { left: 117px; bottom: 82px; }
+		.manifesto-cat { width: 320px; }
 		.portrait-placeholder { min-height: 500px; }
 		.timeline-item { grid-template-columns: 80px 1fr; }
 		.quote-grid figure { padding: 30px; min-height: 360px; }

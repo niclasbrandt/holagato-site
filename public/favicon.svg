@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#feec41"/>
-  <path d="M12 24 9 8l16 9a35 35 0 0 1 14 0L55 8l-3 16c3 4 5 8 5 13 0 11-11 19-25 19S7 48 7 37c0-5 2-9 5-13Z" fill="#ff6060" stroke="#760031" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M21 37h.01M43 37h.01M27 45c3 2 7 2 10 0" fill="none" stroke="#760031" stroke-width="4" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="15" fill="#feec41"/>
+  <path d="M11 25 8 9l16 9a30 30 0 0 1 16 0l16-9-3 16c3 4 5 8 5 13 0 11-11 18-26 18S6 49 6 38c0-5 2-9 5-13Z" fill="#ff6060" stroke="#760031" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m12 15 9 5-7 4Zm40 0-9 5 7 4Z" fill="#feec41" stroke="#760031" stroke-width="2.5" stroke-linejoin="round"/>
+  <ellipse cx="22" cy="37" rx="2.4" ry="3.4" fill="#760031"/>
+  <ellipse cx="42" cy="37" rx="2.4" ry="3.4" fill="#760031"/>
+  <path d="m32 41-3 2 3 2.5 3-2.5Z" fill="#760031"/>
+  <path d="M32 45.5v1c-1.5 2.5-4 3-6 1.5m6-1.5c1.5 2.5 4 3 6 1.5" fill="none" stroke="#760031" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
