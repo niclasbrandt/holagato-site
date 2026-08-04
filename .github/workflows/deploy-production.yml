@@ -1,0 +1,66 @@
+name: Deploy production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Build and deploy to one.com
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://holagato.se
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Install SFTP client
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes lftp
+
+      - name: Trust one.com SFTP host
+        env:
+          SFTP_HOST: ${{ secrets.ONECOM_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.ONECOM_SFTP_PORT || '22' }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          ssh-keyscan -p "$SFTP_PORT" -H "$SFTP_HOST" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy dist over SFTP
+        env:
+          SFTP_HOST: ${{ secrets.ONECOM_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.ONECOM_SFTP_PORT || '22' }}
+          SFTP_USERNAME: ${{ secrets.ONECOM_SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.ONECOM_SFTP_PASSWORD }}
+          SFTP_REMOTE_PATH: ${{ secrets.ONECOM_REMOTE_PATH }}
+        run: |
+          lftp \
+            -u "$SFTP_USERNAME,$SFTP_PASSWORD" \
+            "sftp://$SFTP_HOST:$SFTP_PORT" \
+            -e "set cmd:fail-exit yes; set net:max-retries 2; mirror --reverse --delete --verbose --parallel=4 dist/ \"$SFTP_REMOTE_PATH\"; bye"
