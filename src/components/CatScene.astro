@@ -1,0 +1,69 @@
+<div class="cat-scene" aria-label="A curious coral cat looking over a stack of useful legal notes">
+	<div class="cat-scene__sun" aria-hidden="true"></div>
+	<div class="cat-scene__note cat-scene__note--back" aria-hidden="true">
+		<span>NO. 01</span>
+		<b>MAKE IT<br />USEFUL.</b>
+	</div>
+	<div class="cat-scene__note cat-scene__note--front" aria-hidden="true">
+		<span>FIELD NOTE</span>
+		<i></i><i></i><i></i>
+		<strong>APPROVED-ish</strong>
+	</div>
+	<svg class="cat-scene__cat" viewBox="0 0 520 590" aria-hidden="true">
+		<path class="cat-scene__tail-outline" d="M393 516c74 10 112-20 106-67-4-29-26-45-49-35-19 8-24 31-9 47" />
+		<path class="cat-scene__tail" d="M393 516c74 10 112-20 106-67-4-29-26-45-49-35-19 8-24 31-9 47" />
+		<path class="cat-scene__body" d="M126 566c1-103 34-166 102-188-41-41-52-100-30-151l-10-131 89 72c25-7 53-7 79 0l93-74-13 137c23 53 11 113-31 153 64 28 93 88 91 182H126Z" />
+		<path class="cat-scene__ear" d="m205 119 59 48-57 30Zm224 0-61 50 57 29Z" />
+		<path class="cat-scene__face-patch" d="M238 282c12-25 34-36 58-25 22-15 48-9 62 16 12 23 5 57-18 76-25 21-58 19-81-2-21-19-31-44-21-65Z" />
+		<path class="cat-scene__brow" d="M225 241c14-13 32-15 47-6m70 1c16-9 35-7 48 6" />
+		<path class="cat-scene__eye" d="M232 270c0-18 12-30 30-30s30 12 30 30-12 30-30 30-30-12-30-30Zm99 0c0-18 12-30 30-30s30 12 30 30-12 30-30 30-30-12-30-30Z" />
+		<path class="cat-scene__pupil" d="M262 256v28m99-28v28" />
+		<path class="cat-scene__nose" d="m312 309-12 8 12 11 12-11Z" />
+		<path class="cat-scene__mouth" d="M312 327v8m0 0c-9 12-24 13-34 5m34-5c9 12 24 13 34 5" />
+		<path class="cat-scene__whiskers" d="m272 315-119-22m116 43-124 12m209-34 115-24m-112 46 119 14" />
+		<path class="cat-scene__chest" d="M260 565c4-74 24-113 59-113s55 39 59 113" />
+		<path class="cat-scene__paw" d="M170 566c4-41 25-64 59-64s55 23 59 64m89 0c4-41 25-64 59-64 20 0 36 8 46 23" />
+		<path class="cat-scene__paw-detail" d="M229 505v43m207-43v43" />
+	</svg>
+	<div class="cat-scene__caption" aria-hidden="true"><span>CURIOUS BY NATURE</span><b>↘</b></div>
+</div>
+
+<style>
+	.cat-scene { position: relative; min-height: 660px; isolation: isolate; }
+	.cat-scene__sun { position: absolute; inset: 5% 3% auto auto; width: 82%; aspect-ratio: 1; background: var(--yellow); border-radius: 50%; z-index: -2; }
+	.cat-scene__sun::after { content: ''; position: absolute; inset: -18px; border: 2px solid var(--ink); border-radius: 50%; clip-path: inset(0 42% 0 0); transform: rotate(-17deg); }
+	.cat-scene__cat { position: absolute; width: 88%; right: -2%; bottom: 0; overflow: visible; filter: drop-shadow(10px 12px 0 rgba(118, 0, 49, .12)); }
+	.cat-scene__body { fill: var(--coral); stroke: var(--ink); stroke-width: 7; stroke-linejoin: round; }
+	.cat-scene__tail-outline, .cat-scene__tail { fill: none; stroke-linecap: round; }
+	.cat-scene__tail-outline { stroke: var(--ink); stroke-width: 39; }
+	.cat-scene__tail { stroke: var(--coral); stroke-width: 25; }
+	.cat-scene__ear, .cat-scene__chest { fill: var(--yellow); stroke: var(--ink); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+	.cat-scene__face-patch { fill: #ff8f83; }
+	.cat-scene__eye { fill: var(--paper); stroke: var(--ink); stroke-width: 6; }
+	.cat-scene__brow, .cat-scene__pupil, .cat-scene__mouth, .cat-scene__whiskers, .cat-scene__paw, .cat-scene__paw-detail { fill: none; stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; }
+	.cat-scene__brow { stroke-width: 7; }
+	.cat-scene__pupil { stroke-width: 9; }
+	.cat-scene__nose { fill: var(--ink); }
+	.cat-scene__mouth { stroke-width: 5; }
+	.cat-scene__whiskers { stroke-width: 4; }
+	.cat-scene__paw, .cat-scene__paw-detail { stroke-width: 6; }
+	.cat-scene__note { position: absolute; z-index: 2; border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); color: var(--ink); }
+	.cat-scene__note--back { width: 180px; min-height: 218px; left: 1%; bottom: 12%; padding: 18px; background: var(--red); color: white; transform: rotate(-8deg); }
+	.cat-scene__note--back span, .cat-scene__note--front span { font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+	.cat-scene__note--back b { display: block; margin-top: 52px; font-family: Georgia, serif; font-size: 28px; line-height: .95; }
+	.cat-scene__note--front { width: 168px; min-height: 205px; left: 13%; bottom: 4%; padding: 16px; background: white; transform: rotate(4deg); }
+	.cat-scene__note--front i { display: block; height: 3px; margin-top: 15px; background: var(--ink); opacity: .7; }
+	.cat-scene__note--front i:nth-of-type(2) { width: 75%; }
+	.cat-scene__note--front strong { position: absolute; right: 8px; bottom: 13px; padding: 12px 8px; border: 2px solid var(--red); border-radius: 50%; color: var(--red); font-size: 9px; transform: rotate(-9deg); }
+	.cat-scene__caption { position: absolute; right: -9px; top: 8%; display: flex; align-items: center; gap: 16px; padding: 12px 15px; background: var(--ink); color: white; transform: rotate(5deg); font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+	.cat-scene__caption b { color: var(--yellow); font-size: 20px; }
+
+	@media (max-width: 720px) {
+		.cat-scene { min-height: 480px; }
+		.cat-scene__note--back { width: 128px; min-height: 168px; padding: 12px; }
+		.cat-scene__note--back b { margin-top: 35px; font-size: 19px; }
+		.cat-scene__note--front { width: 120px; min-height: 150px; padding: 11px; }
+		.cat-scene__note--front strong { font-size: 6px; }
+		.cat-scene__caption { right: 0; }
+	}
+</style>

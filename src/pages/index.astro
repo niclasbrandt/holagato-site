@@ -443,6 +443,56 @@ const caseGroups = [
 	</footer>
 </Layout>
 
+<script>
+	const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+	if (!reducedMotion.matches) {
+		const pupils = [
+			...document.querySelectorAll<SVGGraphicsElement>('.logo-mark__eye'),
+			...document.querySelectorAll<SVGGraphicsElement>('.cat-pupil'),
+			...document.querySelectorAll<SVGGraphicsElement>('.manifesto-pupil'),
+		];
+
+		let pointerX = window.innerWidth / 2;
+		let pointerY = window.innerHeight / 2;
+		let animationFrame = 0;
+
+		const movePupils = () => {
+			animationFrame = 0;
+
+			for (const pupil of pupils) {
+				const svg = pupil.ownerSVGElement;
+				if (!svg) continue;
+
+				const bounds = svg.getBoundingClientRect();
+				const viewBox = svg.viewBox.baseVal;
+				if (!bounds.width || !bounds.height || !viewBox.width || !viewBox.height) continue;
+
+				const normalizedX = ((pointerX - (bounds.left + bounds.width / 2)) / bounds.width) * 2;
+				const normalizedY = ((pointerY - (bounds.top + bounds.height / 2)) / bounds.height) * 2;
+				const distance = Math.hypot(normalizedX, normalizedY);
+				const scale = distance > 1 ? 1 / distance : 1;
+				const travel = pupil.classList.contains('logo-mark__eye')
+					? { x: 1.5, y: 1.2 }
+					: pupil.classList.contains('manifesto-pupil')
+						? { x: 7, y: 6 }
+						: { x: 5, y: 4 };
+
+				pupil.setAttribute(
+					'transform',
+					`translate(${normalizedX * scale * travel.x} ${normalizedY * scale * travel.y})`,
+				);
+			}
+		};
+
+		window.addEventListener('pointermove', (event) => {
+			pointerX = event.clientX;
+			pointerY = event.clientY;
+			if (!animationFrame) animationFrame = requestAnimationFrame(movePupils);
+		}, { passive: true });
+	}
+</script>
+
 <style>
 	:global(*) { box-sizing: border-box; }
 	:global(html) { scroll-behavior: smooth; scroll-padding-top: 90px; }
