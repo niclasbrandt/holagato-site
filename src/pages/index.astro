@@ -5,15 +5,15 @@ import LogoMark from '../components/LogoMark.astro';
 const services = [
 	{
 		number: '01',
-		title: 'Commercial contracts',
-		text: 'Clear, workable agreements for customers, vendors, partnerships and everything in between.',
-		tags: ['SaaS', 'Legal', 'Negotiation'],
+		title: 'Startup & scale-up law',
+		text: 'CContracts, fundraising, equity and legal ops built for speed — the legal backbone that lets a growing company move faster, not slower.',
+		tags: ['SaaS', 'Fundraising', 'Contracts', 'Legal ops'],
 	},
 	{
 		number: '02',
-		title: 'Privacy & data',
-		text: 'Practical privacy support that fits your product, your team and the way your data actually moves.',
-		tags: ['GDPR', 'DPA', 'Product advice'],
+		title: 'Speaking & education',
+		text: 'Making AI, privacy and legal risk make sense to people who are not lawyers — from boardrooms to hackathons.',
+		tags: ['Workshops', 'Keynotes', 'Training'],
 	},
 	{
 		number: '03',
@@ -23,9 +23,21 @@ const services = [
 	},
 	{
 		number: '04',
+		title: 'Negotiation',
+		text: 'Negotiation built on trust and clarity, not just leverage — fewer rounds, faster signatures, better terms.',
+		tags: ['Negotiation', 'Vendor deals', 'Union & Employee negotiations'],
+	},
+	{
+		number: '05',
 		title: 'Fractional legal counsel',
-		text: 'Senior legal help when you need it, without making a full-time hire before the time is right.',
-		tags: ['Scale-ups', 'Legal ops', 'Ongoing support'],
+		text: 'Interim and fractional leadership when a team, a board, or a whole legal function needs someone to hold it together.',
+		tags: ['Interim leadership', 'Governance', 'Scale-ups'],
+	},
+	{
+		number: '06',
+		title: 'AI, data & compliance advisory',
+		text: 'Practical compliance for AI and personal data — reviewed early enough to matter, not bolted on after launch.',
+		tags: ['AI', 'GDPR', 'Compliance'],
 	},
 ];
 
@@ -33,6 +45,7 @@ const principles = [
 	['Plain language', 'Advice should make the next move obvious. No legal fog, no twenty-page answer to a two-line question.'],
 	['Close to the work', 'I plug into your team, learn the product and solve the problem with the people actually building it.'],
 	['Right-sized risk', 'Not every risk is a red light. I help you see what matters, decide confidently and keep moving.'],
+	['Fluent in tech', 'I understand the technical side well enough to sit inside the build process, not just review it afterward. I build workflows — from straightforward automation to AI-native processes, with a human checkpoint at the milestones where it actually matters.'],
 ];
 ---
 
@@ -57,7 +70,7 @@ const principles = [
 		<section class="hero section-shell">
 			<div class="hero-copy">
 				<p class="eyebrow"><span></span> Independent legal consulting for tech</p>
-				<h1>Legal advice<br />with <em>curiosity.</em></h1>
+				<h1>Legal advice & strategy<br />with <em>curiosity.</em></h1>
 				<p class="hero-intro">Hola Gato helps ambitious tech companies make clear decisions, useful contracts and excellent products — without the legal theatre.</p>
 				<div class="hero-actions">
 					<a class="button button-dark" href="#contact">Tell me what’s up <span>↘</span></a>
@@ -93,7 +106,7 @@ const principles = [
 		</section>
 
 		<div class="ticker" aria-hidden="true">
-			<div>CONTRACTS <b>✦</b> PRIVACY <b>✦</b> DIGITAL PRODUCTS <b>✦</b> AI <b>✦</b> LEGAL OPS <b>✦</b> GOOD QUESTIONS <b>✦</b></div>
+			<div>CONTRACTS <b>✦</b> FUNDRAISING <b>✦</b> DIGITAL PRODUCTS <b>✦</b> AI <b>✦</b> LEGAL OPS <b>✦</b> PRIVACY <b>✦</b></div>
 		</div>
 
 		<section id="services" class="services section-shell section-space">
@@ -152,24 +165,25 @@ const principles = [
 		</section>
 
 		<section id="about" class="about section-shell section-space">
-			<div class="portrait-placeholder">
-				<div class="portrait-label">YOUR PHOTO<br />GOES HERE</div>
-				<svg viewBox="0 0 470 540" aria-hidden="true">
-					<circle cx="235" cy="220" r="105"></circle>
-					<path d="M86 540c10-128 61-200 149-200s139 72 149 200"></path>
-				</svg>
-				<div class="hello-badge">say hola!<br />↙</div>
-			</div>
-			<div class="about-copy">
-				<p class="kicker">The human behind the work</p>
-				<h2>Hi, I’m <span>[your name].</span><br />Lawyer, tech nerd,<br />question-asker.</h2>
-				<p class="lead">I started Hola Gato to make legal support feel more useful, more collaborative and a lot less intimidating.</p>
-				<p>I’ve spent my career close to technology and the people building it. I’m at my best translating complexity into a plan: listening carefully, finding the real issue and giving you advice your team can actually use.</p>
-				<div class="personal-note">
-					<span>OFF THE CLOCK</span>
-					<p>Add a few human details here — the obscure hobby, current obsession or strong coffee opinion that makes this introduction sound like you.</p>
-				</div>
-			</div>
+    		<div class="portrait-placeholder">
+      		  <div class="portrait-label">YOUR PHOTO<br />GOES HERE</div>
+       		 <svg viewBox="0 0 470 540" aria-hidden="true">
+       		     <circle cx="235" cy="220" r="105"></circle>
+        		 <path d="M86 540c10-128 61-200 149-200s139 72 149 200"></path>
+        	</svg>
+        	<div class="hello-badge">say hola!<br />↙</div>
+    	</div>
+    	<div class="about-copy">
+			<p class="kicker">The human behind the work</p>
+			<h2>Hi, I’m <span>Helena.</span><br />Lawyer, tech nerd,<br />straight talker.</h2>
+			<p class="lead">I started Hola Gato to make legal support feel more useful, more collaborative and a lot less intimidating.</p>
+			<p>I’m a lawyer at heart — but I’m at my best when I get to do more than law. People, negotiations, customer relationships, vendor contracts — all of that is as natural to me as the legal work itself. And unusually for a lawyer, I have a genuinely technical mind, which means I can sit inside a build process while it’s happening, instead of showing up afterward with a list of demands.</p>
+			<p>My view of a well-run organization is that it should become a self-playing piano: clear processes, automation wherever it makes sense, and enough freedom inside the right guardrails that everyone can do their job without hitting a bottleneck.</p>
+        	<div class="personal-note">
+            	<span>OFF THE CLOCK</span>
+            	<p>Off the clock, you’ll usually find me lifting weights, out in the woods, or on a bike. Crime novels are the reset button — Agatha Christie is non-negotiable over the holidays — and the rest of the time goes to concerts, travel, and keeping up with the kids.</p>
+        	</div>
+    	</div>
 		</section>
 
 		<section id="cv" class="cv section-space">
@@ -180,10 +194,13 @@ const principles = [
 					<a class="button button-yellow" href="mailto:hello@holagato.com?subject=Full%20CV%20please">Ask for the full CV ↗</a>
 				</div>
 				<div class="timeline">
-					<div class="timeline-item current"><span>NOW</span><div><h3>Founder & legal consultant</h3><p>Hola Gato · Independent legal support for technology companies and product teams.</p></div></div>
-					<div class="timeline-item"><span>ADD DATES</span><div><h3>Your most relevant role</h3><p>Add the company, title and one sentence about the kind of problems you solved.</p></div></div>
-					<div class="timeline-item"><span>ADD DATES</span><div><h3>Your previous chapter</h3><p>Use this space for another role, consultancy, secondment or career highlight.</p></div></div>
-					<div class="timeline-item"><span>EDUCATION</span><div><h3>Your degree & qualifications</h3><p>University, programme, specialist certificates and bar admission belong here.</p></div></div>
+					<div class="timeline-item current"><span>NOW</span><div><h3>Founder, legal & strategic consultant</h3><p>Hola Gato · Independent legal & strategic support for technology companies and product teams.</p></div></div>
+					<div class="timeline-item"><span>2025–2026</span><div><h3>Head of Operations, Lextopia</h3><p>Pitched the concept to Fondia's group board, got the mandate, built and ran the venture from scratch.</p></div></div>
+					<div class="timeline-item"><span>2024–2025</span><div><h3>AI & Tech Lead Sweden, Fondia</h3><p>From Senior Legal Counsel to AI & Tech Lead Sweden, then Competence Lead Privacy.</p></div></div>
+					<div class="timeline-item"><span>2019–2024 </span><div><h3>Chief Legal & Compliance Officer, Adway AI</h3><p>Seat on both leadership team and board; interim head of Customer Operations; concurrently Head of Legal for sister company Reducero</p></div></div>
+					<div class="timeline-item"><span>2018–2019</span><div><h3>Associate, Advokatfirman Morris</h3><p>  </p></div></div>
+					<div class="timeline-item"><span>2014–2018</span><div><h3>Law clerk, Varberg District Court</h3><p>  </p></div></div>
+					<div class="timeline-item"><span>EDUCATION</span><div><h3>LL.M. (Law degree)</h3><p>School of Business, Economics and Law, University of Gothenburg.</p></div></div>
 				</div>
 			</div>
 		</section>
@@ -212,9 +229,9 @@ const principles = [
 			<p class="kicker">Got a legal knot?</p>
 			<h2>Let’s untangle it.</h2>
 			<p>Tell me what you’re building, where you’re stuck, or what keeps sliding to the bottom of the to-do list.</p>
-			<a class="email-link" href="mailto:hello@holagato.com">hello@holagato.com <span>↗</span></a>
+			<a class="email-link" href="mailto:helena@holagato.com">helena@holagato.com <span>↗</span></a>
 			<div class="contact-links">
-				<span>LinkedIn · add your profile URL</span>
+				<span>LinkedIn · <a href="https://www.linkedin.com/in/helenabrandt/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></span>
 				<span>Based in Sweden · Working everywhere</span>
 			</div>
 		</section>
