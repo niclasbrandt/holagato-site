@@ -282,47 +282,6 @@ const caseGroups = [
 			</div>
 		</section>
 
-<section id="case-studies" class="case-studies section-shell section-space">
-	<div class="section-heading compact">
-		<div><p class="kicker">Case studies</p><h2>Proof,<br /><em>not promises.</em></h2></div>
-		<p>A mix of real engagements and one worked example, organized by the kind of problem they solve.</p>
-	</div>
-
-	<div class="case-featured-grid">
-		{featuredCases.map((item) => (
-			<details class="case-card case-card-featured">
-				<summary>
-					<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
-					<span class="case-indicator">↗</span>
-					<h3>{item.title}</h3>
-					<p>{item.teaser}</p>
-					<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
-				</summary>
-				<p class="case-full">{item.full}</p>
-			</details>
-		))}
-	</div>
-
-	{caseGroups.map((group) => (
-		<div class="case-group">
-			<p class="case-group-heading">{group.heading}</p>
-			<div class="case-grid">
-				{group.cases.map((item) => (
-					<details class="case-card">
-						<summary>
-							<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
-							<span class="case-indicator">↗</span>
-							<h4>{item.title}</h4>
-							<p>{item.teaser}</p>
-							<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
-						</summary>
-						<p class="case-full">{item.full}</p>
-					</details>
-				))}
-			</div>
-		</div>
-	))}
-</section>
 
 		<section class="manifesto section-space">
 			<svg class="manifesto-cat" viewBox="0 0 460 470" aria-hidden="true">
@@ -380,6 +339,47 @@ const caseGroups = [
             	<p>Off the clock, you’ll usually find me lifting weights, out in the woods, or on a bike. Crime novels are the reset button — Agatha Christie is non-negotiable over the holidays — and the rest of the time goes to concerts, travel, and keeping up with the kids.</p>
         	</div>
     	</div>
+		</section>
+		<section id="case-studies" class="case-studies section-shell section-space">
+			<div class="section-heading compact">
+				<div><p class="kicker">Case studies</p><h2>Proof,<br /><em>not promises.</em></h2></div>
+				<p>A mix of real engagements and one worked example, organized by the kind of problem they solve.</p>
+			</div>
+
+			<div class="case-featured-grid">
+				{featuredCases.map((item) => (
+					<details class="case-card case-card-featured">
+						<summary>
+							<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
+							<span class="case-indicator">↗</span>
+							<h3>{item.title}</h3>
+							<p>{item.teaser}</p>
+							<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
+						</summary>
+						<p class="case-full">{item.full}</p>
+					</details>
+				))}
+			</div>
+
+			{caseGroups.map((group) => (
+				<div class="case-group">
+					<p class="case-group-heading">{group.heading}</p>
+					<div class="case-grid">
+						{group.cases.map((item) => (
+							<details class="case-card">
+								<summary>
+									<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
+									<span class="case-indicator">↗</span>
+									<h4>{item.title}</h4>
+									<p>{item.teaser}</p>
+									<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
+								</summary>
+								<p class="case-full">{item.full}</p>
+							</details>
+						))}
+					</div>
+				</div>
+			))}
 		</section>
 
 		<section id="cv" class="cv section-space">
