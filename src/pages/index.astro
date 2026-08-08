@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import LogoMark from '../components/LogoMark.astro';
+import helenaPhoto from '../assets/helena.png';
 
 const services = [
 	{
@@ -285,11 +287,7 @@ const caseGroups = [
 
 		<section id="about" class="about section-shell section-space">
     		<div class="portrait-placeholder">
-      		  <div class="portrait-label">YOUR PHOTO<br />GOES HERE</div>
-       		 <svg viewBox="0 0 470 540" aria-hidden="true">
-       		     <circle cx="235" cy="220" r="105"></circle>
-        		 <path d="M86 540c10-128 61-200 149-200s139 72 149 200"></path>
-        	</svg>
+      		  <Image src={helenaPhoto} alt="Helena, founder of Hola Gato" class="portrait-photo" width={470} height={540} />
         	<div class="hello-badge">say hola!<br />↙︎</div>
     	</div>
     	<div class="about-copy">
@@ -642,8 +640,7 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 
 	.about { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: center; }
 	.portrait-placeholder { min-height: 650px; background: #feec41; border: 3px solid #760031; position: relative; display: flex; align-items: end; overflow: hidden; box-shadow: -12px 12px 0 #ff6060; }
-	.portrait-placeholder svg { width: 100%; fill: #ff6060; stroke: #760031; stroke-width: 4; }
-	.portrait-label { position: absolute; top: 24px; left: 24px; font-size: 11px; font-weight: 900; letter-spacing: 1.5px; border: 2px solid #760031; padding: 9px 12px; transform: rotate(-3deg); }
+	.portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 	.hello-badge { position: absolute; right: -8px; top: 58px; width: 130px; height: 130px; border-radius: 50%; background: #d51c39; color: #fff; display: grid; place-content: center; text-align: center; font-family: Georgia, serif; font-style: italic; font-size: 23px; transform: rotate(8deg); border: 3px solid #760031; }
 	.about-copy h2 span { color: #d51c39; }
 	.about-copy .lead { font-family: Georgia, serif; font-size: 25px; line-height: 1.4; margin: 38px 0 20px; }
