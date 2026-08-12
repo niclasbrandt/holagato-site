@@ -438,7 +438,10 @@ const caseGroups = [
 			<LogoMark />
 			<span>hola gato</span>
 		</a>
-		<p>Legal consulting for curious companies.</p>
+		<div class="footer-center">
+			<p class="footer-org">Hola Gato AB · Org.nr 559587-4834</p>
+			<p>Legal consulting & strategy for curious companies.</p>
+		</div>
 		<p>© {new Date().getFullYear()} Hola Gato</p>
 	</footer>
 </Layout>
@@ -678,8 +681,9 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 	.email-link { display: inline-flex; gap: 25px; font-size: clamp(24px, 4vw, 52px); font-family: Georgia, serif; text-underline-offset: 9px; text-decoration-thickness: 2px; }
 	.contact-links { width: min(100%, 1240px); margin: 100px auto 0; padding-top: 22px; border-top: 2px solid #760031; display: flex; justify-content: space-between; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .8px; }
 	footer { background: #760031; color: #fff; padding: 38px max(24px, calc((100vw - 1240px) / 2)); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; font-size: 12px; }
-	footer p:nth-child(2) { text-align: center; }
-	footer p:last-child { text-align: right; }
+	.footer-center { text-align: center; }
+	.footer-org { margin: 4px 0 0; }
+	footer > p:last-child { text-align: right; }
 	.footer-logo :global(.logo-mark) { --logo-ink: #fff; width: 36px; }
 
 	@media (max-width: 900px) {
@@ -729,7 +733,8 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 		.contact-links, footer { flex-direction: column; gap: 18px; text-align: center; }
 		.contact-links { display: flex; }
 		footer { display: flex; }
-		footer p, footer p:nth-child(2), footer p:last-child { text-align: center; margin: 0; }
+		footer p, footer p:last-child { text-align: center; margin: 0; }
+		.footer-org { text-align: center; margin: 4px 0 0; }
 	}
 
 	@media (prefers-reduced-motion: reduce) {
