@@ -7,197 +7,199 @@ import helenaPhoto from '../assets/helena.png';
 const services = [
 	{
 		number: '01',
-		title: 'Startup & scale-up law',
-		text: 'The legal backbone that lets a growing company move faster, not slower — contracts, fundraising and equity, built for speed.',
-		tags: ['SaaS', 'Fundraising', 'Contracts', 'Legal ops'],
+		title: 'AI transformation for leadership teams',
+		text: 'From “we should do something with AI” to a team that actually works differently – strategy, the right use cases, hands-on setup and the change management that makes it stick.',
+		tags: ['AI strategy', 'Use cases', 'Change management'],
 	},
 	{
 		number: '02',
-		title: 'Speaking & education',
-		text: 'Teams that actually understand AI, privacy and legal risk — not just sit through a training on it. Delivered everywhere from boardrooms to hackathons.',
-		tags: ['Workshops', 'Keynotes', 'Training'],
+		title: 'AI in the legal & compliance team',
+		text: 'Lawyers who use Copilot, Claude or Harvey because it helps, not because IT rolled it out – workflows, playbooks and training built by someone who has done the legal work herself.',
+		tags: ['Legal ops', 'Playbooks', 'Training'],
 	},
 	{
 		number: '03',
-		title: 'Legal for product teams',
-		text: 'Ship on schedule, without a legal rewrite after launch — legal thinking built into the process from first sketch onward.',
-		tags: ['AI', 'Digital products', 'Risk'],
+		title: 'Fractional legal & compliance lead',
+		text: 'A senior, decisive extra pair of hands, 1–2 days a week. GDPR and AI Act work that gets implemented, not just written down.',
+		tags: ['GDPR', 'AI Act', 'Policies', 'Vendor deals'],
 	},
 	{
 		number: '04',
-		title: 'Negotiation',
-		text: 'Fewer rounds, faster signatures, better terms — negotiation built on trust and clarity, not just leverage.',
-		tags: ['Negotiation', 'Vendor deals', 'Union & Employee negotiations'],
+		title: 'Clear decisions at turning points',
+		text: 'Raising capital, changing owners, launching something new? I help owners and boards see what’s true, what’s at stake and what to test first – before it’s hard to undo.',
+		tags: ['Strategy', 'Capital', 'Governance'],
 	},
 	{
 		number: '05',
-		title: 'Fractional legal counsel',
-		text: 'Keep momentum when a team, a board or your whole legal function needs a steady hand — without the cost or timeline of a full-time hire.',
-		tags: ['Interim leadership', 'Governance', 'Scale-ups'],
+		title: 'Speaking & workshops',
+		text: 'Teams that actually understand AI, privacy and legal risk – not just sit through a training on it. Delivered everywhere from boardrooms to hackathons.',
+		tags: ['Workshops', 'Keynotes', 'Training'],
+	},
+];
+
+const audiences = [
+	{
+		number: '01',
+		title: 'Leadership teams ready to start',
+		text: 'You know AI matters. You don’t yet have a plan – or a way to roll it out without putting data, trust or people at risk.',
 	},
 	{
-		number: '06',
-		title: 'AI, data & compliance advisory',
-		text: 'Launch on time with compliance that holds up — reviewed early enough to matter, not bolted on after the fact.',
-		tags: ['AI', 'GDPR', 'Compliance'],
+		number: '02',
+		title: 'Lean legal teams',
+		text: 'One or two lawyers, a growing company and a to-do list that keeps growing. You need capacity and judgment, not another memo.',
+	},
+	{
+		number: '03',
+		title: 'Owners at a turning point',
+		text: 'Capital, generational change, a new business line. Big decisions, hard to undo.',
 	},
 ];
 
 const principles = [
 	['Plain language', 'Advice should make the next move obvious. No legal fog, no twenty-page answer to a two-line question.'],
-	['Close to the work', 'I plug into your team, learn the product and solve the problem with the people actually building it.'],
+	['Close to the work', 'I plug into your team, learn how you actually work and solve the problem with the people doing it.'],
 	['Right-sized risk', 'Not every risk is a red light. I help you see what matters, decide confidently and keep moving.'],
-	['Fluent in tech', 'I understand the technical side well enough to sit inside the build process, not just review it afterward. I build workflows — from straightforward automation to AI-native processes, with a human checkpoint at the milestones where it actually matters.'],
+	['Fluent in tech', 'I understand the technical side well enough to sit inside the build process, not just review it afterward. I build workflows – from straightforward automation to AI-native processes, with a human checkpoint at the milestones where it actually matters.'],
 ];
+
 const featuredCases = [
 	{
-		number: '01',
 		badge: 'Completed',
 		title: 'From pitch to mandate',
-		teaser: 'Turned a pitch into a fully-funded venture — a new AI-native legal service line, built and run from scratch after winning board sign-off.',
+		teaser: 'Turned a pitch into a fully-funded venture – a new AI-native legal service line, built and run from scratch after winning board sign-off.',
 		tags: ['Strategy', 'Innovation', 'Leadership'],
 		full: 'A legal services group had the expertise but no clear initiative to develop next-generation AI-driven legal services. Spotted the opportunity, developed it into a concrete proposal, and pitched it to the group board. Got the mandate, built the organization and ways of working, led pilot collaborations with clients, and set up partnerships with legal tech vendors. Result: launched as an independent innovation venture within the group, with a new AI-native, fixed-fee delivery model.',
 	},
 	{
-		number: '02',
 		badge: 'Completed',
 		title: 'From bottleneck to sales engine',
-		teaser: 'A measurably shorter sales cycle — built on new contract templates, clear decision rights, and an ISO 27001 certification in four months.',
+		teaser: 'A measurably shorter sales cycle – built on new contract templates, clear decision rights, and an ISO 27001 certification in four months.',
 		tags: ['Legal ops', 'SaaS', 'ISO 27001'],
 		full: 'Contracts were drafted from scratch every time, and large customers’ security and procurement reviews were dragging out the sales cycle. Built a SaaS-standardized contract structure and a decision-rights framework giving sales reps freedom inside clear limits, with built-in thresholds for when a deal needed to escalate to a manager. Designed the templates and user rights structure to be intuitive both for in-house CLM users and for the counterparty receiving the draft. Rolled out and trained the team on legal tech tools, built a HubSpot-based sales playbook for one source of truth on numbers, and co-led the company’s ISO 27001 certification in about four months, building on governance work already in place. Result: fewer negotiation rounds, shorter time from verbal yes to signature, less friction in security reviews, and a measurably shorter sales cycle. The framework was still running largely unchanged years after she moved on.',
 	},
 ];
 
+// Visible by default
 const caseGroups = [
 	{
-		heading: '360, strategy & business',
+		heading: 'AI & transformation',
 		cases: [
 			{
-				number: '03',
 				badge: 'Completed',
-				title: 'The operational backbone of a scale-up',
-				teaser: 'Two funding rounds closed in time and with more balanced terms — despite being the smaller party at the table.',
-				tags: ['Fundraising', 'Governance', 'Equity'],
-				full: 'A fast-growing AI company needed someone to hold together fundraising, board governance and employee equity without slowing the business down. Project-led two investment rounds end to end — coordinating outside counsel, managing legal budget, keeping the data room current, and negotiating every agreement (SPA, SHA and more) alongside the CEO and interim CFO. Sat as board secretary with a standing seat in every meeting, often serving as a real-time “handbrake” or guide when discussions needed it. Ran the company’s entire qualified employee stock option program. Result: no delays in either funding round traced back to her work. Terms came out more balanced despite being the smaller party in negotiations.',
+				title: 'Buying and implementing the right legal tech',
+				teaser: 'Shorter sales cycles and a tool the whole company actually uses – not just what the vendor’s demo promised.',
+				tags: ['CLM', 'Procurement', 'Legal ops'],
+				full: 'Many lawyers are bad at buying systems – they take what a vendor recommends without knowing what the organization actually needs. Has procured CLM systems multiple times: mapping actual needs, listing must-haves versus nice-to-haves, streamlining existing processes, negotiating hidden costs out of the deal, leading migrations, and building playbooks herself for both legal and sales. Usability always comes before feature count. Result: shorter sales cycles and the ability to actually verify that playbooks and guides are being used correctly.',
 			},
 			{
-				number: '04',
+				badge: 'Completed',
+				title: 'Lawyers, vibe-coding for the first time',
+				teaser: '20 lawyers walked away having built the tool they had been missing in their own workflow – not just sat through another training.',
+				tags: ['Legal tech', 'AI', 'Workshop'],
+				full: 'Organized and ran an internal hackathon evening for about 20 lawyers who’d never vibe-coded before. The premise: vibe coding is going to become a normal way of working for lawyers, not just developers. Participants built whatever they wanted, and mostly built tools they’d been missing in their day-to-day. Strong feedback, and an evening that sparked more thinking than expected.',
+			},
+			{
+				badge: 'Completed',
+				title: 'Part of the build, not the after-the-fact reviewer',
+				teaser: 'A GDPR-compliant AI tool, launched on schedule – by joining the build early instead of reviewing it after the fact.',
+				tags: ['AI', 'GDPR', 'Product'],
+				full: 'A large corporate group had built an AI tool for internal GDPR pseudonymization of images. Brought in during development itself, as a running sounding board – not a post-launch review. Ran a risk assessment alongside the dev team, and reviewed exactly what metadata the service actually needed, stripping out anything kept “just in case” that risked employees’ privacy. Result: a genuinely useful tool that saved time and money, was GDPR-compliant, and protected employee privacy – with no delay to launch.',
+			},
+		],
+	},
+	{
+		heading: 'Leadership & change',
+		cases: [
+			{
 				badge: 'Completed',
 				title: 'Turning around a team without a leader',
-				teaser: 'Output and customer satisfaction held steady with a smaller team — after stepping in to lead a group that had neither a leader nor a plan.',
+				teaser: 'Output and customer satisfaction held steady with a smaller team – after stepping in to lead a group that had neither a leader nor a plan.',
 				tags: ['Interim leadership', 'Operations'],
-				full: 'A team had no leader and was underperforming — no one internal was ready to step up. Took the role herself, introduced productization as an operating model to get processes and cost under control, and slimmed the team while holding production levels. Result: six months in, both output and customer satisfaction held steady with a smaller team. It was messy for everyone involved — but it worked. Leadership isn’t a title, it’s rolling up your sleeves.',
+				full: 'A team had no leader and was underperforming – no one internal was ready to step up. Took the role herself, introduced productization as an operating model to get processes and cost under control, and slimmed the team while holding production levels. Result: six months in, both output and customer satisfaction held steady with a smaller team. It was messy for everyone involved – but it worked. Leadership isn’t a title, it’s rolling up your sleeves.',
 			},
 			{
-				number: '05',
+				badge: 'Completed',
+				title: 'The operational backbone of a scale-up',
+				teaser: 'Two funding rounds closed in time and with more balanced terms – despite being the smaller party at the table.',
+				tags: ['Fundraising', 'Governance', 'Equity'],
+				full: 'A fast-growing AI company needed someone to hold together fundraising, board governance and employee equity without slowing the business down. Project-led two investment rounds end to end – coordinating outside counsel, managing legal budget, keeping the data room current, and negotiating every agreement (SPA, SHA and more) alongside the CEO and interim CFO. Sat as board secretary with a standing seat in every meeting, often serving as a real-time “handbrake” or guide when discussions needed it. Ran the company’s entire qualified employee stock option program. Result: no delays in either funding round traced back to her work. Terms came out more balanced despite being the smaller party in negotiations.',
+			},
+			{
+				badge: 'Completed',
+				title: 'Speaking for leaders & industry',
+				teaser: 'Helped executives and industry leaders turn AI uncertainty into a plan they could actually act on – as a recurring guest lecturer and speaker.',
+				tags: ['Linnaeus University', 'Business Region Gothenburg', 'IUC Syd'],
+				full: 'Teaches the ELSI (Ethical, Legal and Social Implications of AI) module within the University of Gothenburg’s “AI for leaders” course, in collaboration with Fondia Legal Services. Also a regular speaker for Business Region Gothenburg’s “AI Know” series and IUC Syd’s AI governance sessions for manufacturing leaders and technicians, run jointly with Effectit.',
+			},
+		],
+	},
+];
+
+// Hidden behind "Show all cases"
+const moreCaseGroups = [
+	{
+		heading: 'Workflows & training',
+		cases: [
+			{
+				badge: 'Completed',
+				title: 'Automating the process, keeping the judgment',
+				teaser: 'Client meetings that start already prepared – an AI-native framework handles the groundwork, with a human check at the moment it actually matters.',
+				tags: ['AI', 'Workflow design', 'Legal ops'],
+				full: 'Preparing for a first client conversation usually means manually gathering and structuring information – slow and inconsistent depending on who’s doing it. Designed an AI-native framework (currently in active development; specifics confidential) that automates information-gathering and initial analysis, and helps surface the right questions before a first meeting – with a human checkpoint built in at the point where accuracy and legitimacy actually need verifying. Sits alongside a separate, more traditional automation build for a previous employer that’s still running largely unchanged years later.',
+			},
+			{
+				badge: 'Completed',
+				title: 'Speaking for lawyers & compliance professionals',
+				teaser: 'Gave legal and compliance teams a clear, actionable read on cross-border data transfer rules – as a recurring masterclass speaker.',
+				tags: ['Data transfers', 'GDPR', 'Professional training'],
+				full: 'Delivered masterclass sessions on transferring personal data outside the EU (primarily to the US) for a GDPR compliance platform’s customer base of legal and compliance professionals, and for a legal training center audience of practicing lawyers.',
+			},
+			{
 				badge: 'Completed',
 				title: 'Negotiating on trust, not just clauses',
-				teaser: 'Fewer negotiation rounds and faster signatures from enterprise customers — earned with visual maps and white papers, not legal leverage.',
+				teaser: 'Fewer negotiation rounds and faster signatures from enterprise customers – earned with visual maps and white papers, not legal leverage.',
 				tags: ['Negotiation', 'Trust-building'],
 				full: 'Large enterprise customers with heavy internal procurement processes routinely dragged negotiations out for weeks, especially around complex topics like data flows, cookies and pixels. Built visual maps and white papers that clearly showed exactly what happened to a customer’s data. Trimmed contract terms down to what actually mattered, and gave clear reasoning for the terms that couldn’t move. Result: fewer negotiation rounds and a shorter path from first meeting to signature.',
 			},
 		],
 	},
 	{
-		heading: 'Speaking & education',
+		heading: 'Legal & compliance foundation',
 		cases: [
 			{
-				number: '06',
-				badge: 'Completed',
-				title: 'Lawyers, vibe-coding for the first time',
-				teaser: '20 lawyers walked away having built the tool they had been missing in their own workflow — not just sat through another training.',
-				tags: ['Legal tech', 'AI', 'Workshop'],
-				full: 'Organized and ran an internal hackathon evening for about 20 lawyers who’d never vibe-coded before. The premise: vibe coding is going to become a normal way of working for lawyers, not just developers. Participants built whatever they wanted, and mostly built tools they’d been missing in their day-to-day. Strong feedback, and an evening that sparked more thinking than expected.',
-			},
-			{
-				number: '07',
-				badge: 'Completed',
-				title: 'Speaking for leaders & industry',
-				teaser: 'Helped executives and industry leaders turn AI uncertainty into a plan they could actually act on — as a recurring guest lecturer and speaker.',
-				tags: ['Linnaeus University', 'Business Region Gothenburg', 'IUC Syd'],
-				full: 'Teaches the ELSI (Ethical, Legal and Social Implications of AI) module within the University of Gothenburg’s “AI for leaders” course, in collaboration with Fondia Legal Services. Also a regular speaker for Business Region Gothenburg’s “AI Know” series and IUC Syd’s AI governance sessions for manufacturing leaders and technicians, run jointly with Effectit.',
-			},
-			{
-				number: '08',
-				badge: 'Completed',
-				title: 'Speaking for lawyers & compliance professionals',
-				teaser: 'Gave legal and compliance teams a clear, actionable read on cross-border data transfer rules — as a recurring masterclass speaker.',
-				tags: ['Data transfers', 'GDPR', 'Professional training'],
-				full: 'Delivered masterclass sessions on transferring personal data outside the EU (primarily to the US) for a GDPR compliance platform’s customer base of legal and compliance professionals, and for a legal training center audience of practicing lawyers.',
-			},
-		],
-	},
-	{
-		heading: 'Where tech meets law',
-		cases: [
-			{
-				number: '09',
-				badge: 'Completed',
-				title: 'Part of the build, not the after-the-fact reviewer',
-				teaser: 'A GDPR-compliant AI tool, launched on schedule — by joining the build early instead of reviewing it after the fact.',
-				tags: ['AI', 'GDPR', 'Product'],
-				full: 'A large corporate group had built an AI tool for internal GDPR pseudonymization of images. Brought in during development itself, as a running sounding board — not a post-launch review. Ran a risk assessment alongside the dev team, and reviewed exactly what metadata the service actually needed, stripping out anything kept “just in case” that risked employees’ privacy. Result: a genuinely useful tool that saved time and money, was GDPR-compliant, and protected employee privacy — with no delay to launch.',
-			},
-			{
-				number: '10',
-				badge: 'Completed',
-				title: 'Buying and implementing the right legal tech',
-				teaser: 'Shorter sales cycles and a tool the whole company actually uses — not just what the vendor&quot;s demo promised.',
-				tags: ['CLM', 'Procurement', 'Legal ops'],
-				full: 'Many lawyers are bad at buying systems — they take what a vendor recommends without knowing what the organization actually needs. Has procured CLM systems multiple times: mapping actual needs, listing must-haves versus nice-to-haves, streamlining existing processes, negotiating hidden costs out of the deal, leading migrations, and building playbooks herself for both legal and sales. Usability always comes before feature count. Result: shorter sales cycles and the ability to actually verify that playbooks and guides are being used correctly.',
-			},
-			{
-				number: '16',
-				badge: 'Completed',
-				title: 'Automating the process, keeping the judgment',
-				teaser: 'Client meetings that start already prepared — an AI-native framework handles the groundwork, with a human check at the moment it actually matters.',
-				tags: ['AI', 'Workflow design', 'Legal ops'],
-				full: 'Preparing for a first client conversation usually means manually gathering and structuring information — slow and inconsistent depending on who’s doing it. Designed an AI-native framework (currently in active development; specifics confidential) that automates information-gathering and initial analysis, and helps surface the right questions before a first meeting — with a human checkpoint built in at the point where accuracy and legitimacy actually need verifying. Sits alongside a separate, more traditional automation build for a previous employer that’s still running largely unchanged years later.',
-			},
-		],
-	},
-	{
-		heading: 'The foundation: data, contracts & compliance',
-		cases: [
-			{
-				number: '11',
 				badge: 'Completed',
 				title: 'Balance in data processing agreements',
-				teaser: 'Balanced terms secured against a much larger counterparty — negotiated from experience on both sides of the DPA table.',
+				teaser: 'Balanced terms secured against a much larger counterparty – negotiated from experience on both sides of the DPA table.',
 				tags: ['DPA', 'GDPR', 'Negotiation'],
-				full: 'Has sat on both the vendor and customer side of DPA negotiations — unusual for a lawyer, who typically only sees one side. A DPA isn’t just paperwork; it’s a guide for who does what if an incident is suspected. In one case, negotiated both a more balanced allocation of responsibility and terms that favored her client, despite representing the smaller company.',
+				full: 'Has sat on both the vendor and customer side of DPA negotiations – unusual for a lawyer, who typically only sees one side. A DPA isn’t just paperwork; it’s a guide for who does what if an incident is suspected. In one case, negotiated both a more balanced allocation of responsibility and terms that favored her client, despite representing the smaller company.',
 			},
 			{
-				number: '12',
 				badge: 'Completed',
 				title: 'Incident response',
-				teaser: 'ast, defensible calls on whether an incident needs reporting — made through rapid technical and legal assessment, not guesswork.',
+				teaser: 'Fast, defensible calls on whether an incident needs reporting – made through rapid technical and legal assessment, not guesswork.',
 				tags: ['GDPR', 'Incident response'],
-				full: 'Good incident response starts long before an incident happens — in policy and internal training. Her role: quickly understand what happened technically, assess whether personal data was exposed, and document it against pre-built templates to determine reporting obligations. Good incident work is a team sport, not a solo job for compliance.',
+				full: 'Good incident response starts long before an incident happens – in policy and internal training. Her role: quickly understand what happened technically, assess whether personal data was exposed, and document it against pre-built templates to determine reporting obligations. Good incident work is a team sport, not a solo job for compliance.',
 			},
 			{
-				number: '13',
 				badge: 'Completed',
 				title: 'Policy & legal design',
-				teaser: 'Employee handbooks and policies built to actually be used — not filed away and forgotten.',
+				teaser: 'Employee handbooks and policies built to actually be used – not filed away and forgotten.',
 				tags: ['Legal design', 'Policy'],
-				full: 'Builds policies and employee handbooks with legal design as the guiding principle — readable, accessible, practical dos and don’ts instead of legal paperweights gathering dust. Clear policy is also what makes union negotiations and reorganizations possible — it gives you something concrete to point to.',
+				full: 'Builds policies and employee handbooks with legal design as the guiding principle – readable, accessible, practical dos and don’ts instead of legal paperweights gathering dust. Clear policy is also what makes union negotiations and reorganizations possible – it gives you something concrete to point to.',
 			},
 			{
-				number: '14',
 				badge: 'Completed',
 				title: 'Negotiation, day to day',
 				teaser: 'Pragmatic terms against take-it-or-leave-it cloud vendors; union negotiations built on clear policy.',
 				tags: ['Vendor negotiation', 'Union relations'],
-				full: 'With major cloud vendors, price is rarely negotiable — what matters is knowing exactly what you’re signing, and accounting for the vendor’s own limitations of liability in your downstream terms. Has also led union negotiations and reorganization planning alongside People & Culture leadership — always aiming to build trust rather than force an outcome.',
+				full: 'With major cloud vendors, price is rarely negotiable – what matters is knowing exactly what you’re signing, and accounting for the vendor’s own limitations of liability in your downstream terms. Has also led union negotiations and reorganization planning alongside People & Culture leadership – always aiming to build trust rather than force an outcome.',
 			},
 			{
-				number: '15',
 				badge: 'Example',
 				title: 'AI Act risk classification ahead of launch',
-				teaser: ' launch that holds up legally without losing momentum — risk classification and a compliance plan built before a deadline forces a rushed one.',
+				teaser: 'A launch that holds up legally without losing momentum – risk classification and a compliance plan built before a deadline forces a rushed one.',
 				tags: ['EU AI Act', 'Risk', 'Compliance'],
-				full: 'A company is about to launch an AI-driven product — say, in recruitment or credit scoring — areas often classified as high-risk under the EU AI Act — but has no process for working out which requirements actually apply. Classify the product under the AI Act’s risk tiers, map which obligations are triggered, and build a pragmatic compliance plan that doesn’t stall the launch. Result: a launch that holds up legally without losing momentum.',
+				full: 'A company is about to launch an AI-driven product – say, in recruitment or credit scoring – areas often classified as high-risk under the EU AI Act – but has no process for working out which requirements actually apply. Classify the product under the AI Act’s risk tiers, map which obligations are triggered, and build a pragmatic compliance plan that doesn’t stall the launch. Result: a launch that holds up legally without losing momentum.',
 			},
 		],
 	},
@@ -205,8 +207,8 @@ const caseGroups = [
 ---
 
 <Layout
-	title="Hola Gato — Legal counsel for people building the future"
-	description="Independent legal consulting for technology companies, product teams and growing businesses."
+	title="Hola Gato – The lawyer who gets things off the ground"
+	description="Independent legal strategy and change for leadership teams and lean legal teams – AI rollouts, compliance that gets done, and decisions that are hard to undo."
 >
 	<header class="site-header">
 		<a class="logo" href="#top" aria-label="Hola Gato, back to top">
@@ -215,6 +217,7 @@ const caseGroups = [
 		</a>
 		<nav aria-label="Main navigation">
 			<a href="#services">Services</a>
+			<a href="#who">Who I work with</a>
 			<a href="#about">About</a>
 			<a href="#case-studies">Case studies</a>
 			<a href="#cv">CV</a>
@@ -225,9 +228,9 @@ const caseGroups = [
 	<main id="top">
 		<section class="hero section-shell">
 			<div class="hero-copy">
-				<p class="eyebrow"><span></span> Independent legal consulting for tech</p>
-				<h1>Legal advice & strategy<br />with <em>curiosity.</em></h1>
-				<p class="hero-intro">Hola Gato helps ambitious tech companies make clear decisions, useful contracts and excellent products — without the legal theatre.</p>
+				<p class="eyebrow"><span></span> A lawyer who’d rather build than block</p>
+				<h1>The lawyer who gets things<br /><em>off the ground.</em></h1>
+				<p class="hero-intro">AI rollouts, compliance that actually gets done, decisions that are hard to undo. I help leadership teams and legal teams move, with the legal calls made along the way, not after.</p>
 				<div class="hero-actions">
 					<a class="button button-dark" href="#contact">Tell me what’s up <span>↘︎</span></a>
 					<a class="text-link" href="#services">See how I can help <span>↓︎</span></a>
@@ -262,13 +265,13 @@ const caseGroups = [
 		</section>
 
 		<div class="ticker" aria-hidden="true">
-			<div>CONTRACTS <b>✦︎</b> FUNDRAISING <b>✦︎</b> DIGITAL PRODUCTS <b>✦︎</b> AI <b>✦︎</b> LEGAL OPS <b>✦︎</b> PRIVACY <b>✦︎</b></div>
+			<div>AI STRATEGY <b>✦︎</b> CHANGE MANAGEMENT <b>✦︎</b> AI IN LEGAL <b>✦︎</b> GDPR & AI ACT <b>✦︎</b> LEGAL OPS <b>✦︎</b> LEADERSHIP <b>✦︎</b></div>
 		</div>
 
 		<section id="services" class="services section-shell section-space">
 			<div class="section-heading">
-				<div><p class="kicker">What I do</p><h2>Legal support that<br /><em>keeps you moving.</em></h2></div>
-				<p>I work where law, technology and business overlap. Bring me in for one knotty question or make me part of the team.</p>
+				<div><p class="kicker">What I do</p><h2>Change that<br /><em>keeps you moving.</em></h2></div>
+				<p>I work where law, technology and business overlap. Bring me in to get started, to lead the change, or as a steady extra pair of hands.</p>
 			</div>
 
 			<div class="service-grid">
@@ -284,6 +287,21 @@ const caseGroups = [
 			</div>
 		</section>
 
+		<section id="who" class="who section-shell">
+			<div class="section-heading compact">
+				<div><p class="kicker">Who I work with</p><h2>Not just tech.<br /><em>Organizations that run on expertise.</em></h2></div>
+				<p>Most of my years were spent in AI scale-ups and legal services, and I’ve trained leaders from manufacturing to regional business. If your organization runs on knowledge, data and trust, we’ll speak the same language.</p>
+			</div>
+			<div class="who-grid">
+				{audiences.map((item) => (
+					<article class="who-card">
+						<div class="service-number">{item.number}</div>
+						<h3>{item.title}</h3>
+						<p>{item.text}</p>
+					</article>
+				))}
+			</div>
+		</section>
 
 		<section class="testimonials section-shell section-space">
 			<div class="section-heading compact">
@@ -298,29 +316,28 @@ const caseGroups = [
 				</figure>
 				<figure>
 					<div class="quote-mark">“</div>
-					<blockquote>Building Lextopia together was one of the most energizing projects of my time at Fondia. Helena doesn't just understand AI and legal tech in theory — she gets in and builds the actual workflows, and brings the rest of the organization along with her. That combination is genuinely rare.</blockquote>
+					<blockquote>Building Lextopia together was one of the most energizing projects of my time at Fondia. Helena doesn't just understand AI and legal tech in theory – she gets in and builds the actual workflows, and brings the rest of the organization along with her. That combination is genuinely rare.</blockquote>
 					<figcaption><b>Emma Ridderstad</b><span>Founder | Advisor | TEDx Speaker · Former MD of Fondia Sweden</span></figcaption>
 				</figure>
 			</div>
 		</section>
 
-
 		<section id="about" class="about section-shell section-space">
-    		<div class="portrait-placeholder">
-      		  <Image src={helenaPhoto} alt="Helena, founder of Hola Gato" class="portrait-photo" width={470} height={540} />
-        	<div class="hello-badge">say hola!<br />↙︎</div>
-    	</div>
-    	<div class="about-copy">
-			<p class="kicker">The human behind the work</p>
-			<h2>Hi, I’m <span>Helena.</span><br />Lawyer, tech nerd,<br />straight talker.</h2>
-			<p class="lead">I started Hola Gato to make legal support feel more useful, more collaborative and a lot less intimidating.</p>
-			<p>I’m a lawyer at heart — but I’m at my best when I get to do more than law. People, negotiations, customer relationships, vendor contracts — all of that is as natural to me as the legal work itself. And unusually for a lawyer, I have a genuinely technical mind, which means I can sit inside a build process while it’s happening, instead of showing up afterward with a list of demands.</p>
-			<p>My view of a well-run organization is that it should become a self-playing piano: clear processes, automation wherever it makes sense, and enough freedom inside the right guardrails that everyone can do their job without hitting a bottleneck.</p>
-        	<div class="personal-note">
-            	<span>OFF THE CLOCK</span>
-            	<p>Off the clock, you’ll usually find me lifting weights, out in the woods, or on a bike. Crime novels are the reset button — Agatha Christie is non-negotiable over the holidays — and the rest of the time goes to concerts, travel, and keeping up with the kids.</p>
-        	</div>
-    	</div>
+			<div class="portrait-placeholder">
+				<Image src={helenaPhoto} alt="Helena, founder of Hola Gato" class="portrait-photo" width={470} height={540} />
+				<div class="hello-badge">say hola!<br />↙︎</div>
+			</div>
+			<div class="about-copy">
+				<p class="kicker">The human behind the work</p>
+				<h2>Hi, I’m <span>Helena.</span><br />Lawyer, tech nerd,<br />straight talker.</h2>
+				<p class="lead">I started Hola Gato to help organizations get things off the ground – AI, compliance, big decisions – without losing their footing on data, law or people.</p>
+				<p>I’m a lawyer at heart, but I’m at my best leading change: projects, people, negotiations, rollouts. And unusually for a lawyer, I have a genuinely technical mind, which means I can sit inside a build process while it’s happening, instead of showing up afterward with a list of demands.</p>
+				<p>My view of a well-run organization is that it should become a self-playing piano: clear processes, automation wherever it makes sense, and enough freedom inside the right guardrails that everyone can do their job without hitting a bottleneck.</p>
+				<div class="personal-note">
+					<span>OFF THE CLOCK</span>
+					<p>Off the clock, you’ll usually find me lifting weights, out in the woods, or on a bike. Crime novels are the reset button – Agatha Christie is non-negotiable over the holidays – and the rest of the time goes to concerts, travel, and keeping up with the kids.</p>
+				</div>
+			</div>
 		</section>
 
 		<section class="manifesto section-space">
@@ -359,7 +376,6 @@ const caseGroups = [
 			</div>
 		</section>
 
-		
 		<section id="case-studies" class="case-studies section-shell section-space">
 			<div class="section-heading compact">
 				<div><p class="kicker">Case studies</p><h2>Proof,<br /><em>not promises.</em></h2></div>
@@ -400,6 +416,29 @@ const caseGroups = [
 					</div>
 				</div>
 			))}
+
+			<details class="more-cases">
+				<summary><span class="more-open">Show all cases ↓︎</span><span class="more-close">Show fewer ↑︎</span></summary>
+				{moreCaseGroups.map((group) => (
+					<div class="case-group">
+						<p class="case-group-heading">{group.heading}</p>
+						<div class="case-grid">
+							{group.cases.map((item) => (
+								<details class="case-card">
+									<summary>
+										<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
+										<span class="case-indicator">↗︎</span>
+										<h4>{item.title}</h4>
+										<p>{item.teaser}</p>
+										<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
+									</summary>
+									<p class="case-full">{item.full}</p>
+								</details>
+							))}
+						</div>
+					</div>
+				))}
+			</details>
 		</section>
 
 		<section id="cv" class="cv section-space">
@@ -410,10 +449,10 @@ const caseGroups = [
 					<a class="button button-yellow" href="mailto:helena@holagato.se?subject=Full%20CV%20please">Ask for the full CV ↗︎</a>
 				</div>
 				<div class="timeline">
-					<div class="timeline-item current"><span>NOW</span><div><h3>Founder, legal & strategic consultant</h3><p>Hola Gato · Independent legal & strategic support for technology companies and product teams.</p></div></div>
+					<div class="timeline-item current"><span>NOW</span><div><h3>Founder, legal strategy & change</h3><p>Hola Gato · Helping organizations get AI, compliance and big decisions off the ground – with the legal calls made along the way.</p></div></div>
 					<div class="timeline-item"><span>2025–2026</span><div><h3>Head of Operations, Lextopia</h3><p>Pitched the concept to Fondia's group board, got the mandate, built and ran the venture from scratch.</p></div></div>
 					<div class="timeline-item"><span>2024–2025</span><div><h3>AI & Tech Lead Sweden, Fondia</h3><p>From Senior Legal Counsel to AI & Tech Lead Sweden, then Competence Lead Privacy.</p></div></div>
-					<div class="timeline-item"><span>2019–2024 </span><div><h3>Chief Legal & Compliance Officer, Adway AI</h3><p>Seat on both leadership team and board; interim head of Customer Operations; concurrently Head of Legal for sister company Reducero</p></div></div>
+					<div class="timeline-item"><span>2019–2024</span><div><h3>Chief Legal & Compliance Officer, Adway AI</h3><p>Seat on both leadership team and board; interim head of Customer Operations; concurrently Head of Legal for sister company Reducero.</p></div></div>
 					<div class="timeline-item"><span>2018–2019</span><div><h3>Associate, Advokatfirman Morris</h3><p>  </p></div></div>
 					<div class="timeline-item"><span>2014–2018</span><div><h3>Law clerk, Varberg District Court</h3><p>  </p></div></div>
 					<div class="timeline-item"><span>2012</span><div><h3>LL.M. (Law degree)</h3><p>School of Business, Economics and Law, University of Gothenburg.</p></div></div>
@@ -423,9 +462,10 @@ const caseGroups = [
 
 		<section id="contact" class="contact section-space">
 			<div class="contact-spark" aria-hidden="true">✦︎</div>
-			<p class="kicker">Got a legal knot?</p>
+			<p class="kicker">“Is this even allowed?” “Where do we start?” “Who decides?”</p>
 			<h2>Let’s untangle it.</h2>
-			<p>Tell me what you’re building, where you’re stuck, or what keeps sliding to the bottom of the to-do list.</p>
+			<p>Tell me where you are, what you’ve tried, or what keeps sliding to the bottom of the to-do list.</p>
+			<p class="contact-sv">Svenska? Självklart – skriv på det språk du vill.</p>
 			<a class="email-link" href="mailto:helena@holagato.se">helena@holagato.se <span>↗︎</span></a>
 			<div class="contact-links">
 				<span>LinkedIn · <a href="https://www.linkedin.com/in/helenabrandt/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗︎</a></span>
@@ -441,7 +481,7 @@ const caseGroups = [
 		</a>
 		<div class="footer-center">
 			<p class="footer-org">Hola Gato AB · Org.nr 559587-4834</p>
-			<p>Legal consulting & strategy for curious companies.</p>
+			<p>Legal strategy & change for curious companies.</p>
 		</div>
 		<p>© {new Date().getFullYear()} Hola Gato</p>
 	</footer>
@@ -522,7 +562,7 @@ const caseGroups = [
 	.eyebrow { display: flex; align-items: center; gap: 11px; }
 	.eyebrow span { width: 8px; height: 8px; background: #d51c39; border-radius: 50%; box-shadow: 0 0 0 5px rgba(213,28,57,.13); }
 	h1, h2, blockquote { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -.055em; }
-	h1 { font-size: clamp(66px, 7.2vw, 112px); line-height: .84; margin: 34px 0; font-weight: 500; }
+	h1 { font-size: clamp(60px, 6.6vw, 104px); line-height: .88; margin: 34px 0; font-weight: 500; }
 	h1 em, h2 em, blockquote em { color: #d51c39; font-weight: 500; }
 	.hero-intro { max-width: 600px; font-size: clamp(18px, 1.7vw, 23px); line-height: 1.45; }
 	.hero-actions { display: flex; align-items: center; gap: 30px; margin-top: 42px; }
@@ -570,48 +610,67 @@ const caseGroups = [
 	.section-heading > p { font-size: 19px; line-height: 1.55; max-width: 410px; justify-self: end; margin: 0 0 6px; }
 	.service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 	.service-card { position: relative; min-height: 340px; padding: 32px; border: 2px solid #760031; border-radius: 2px; overflow: hidden; background: #fffaf3; transition: transform .25s ease, background .25s ease, color .25s ease; }
-	.service-card:nth-child(2), .service-card:nth-child(3) { background: #ff6060; }	
+	.service-card:nth-child(2), .service-card:nth-child(3) { background: #ff6060; }
+	.service-card:last-child:nth-child(odd) { grid-column: 1 / -1; min-height: 260px; }
 	@media (hover: hover) and (pointer: fine) {
-	.service-card:hover { transform: translateY(-7px); background: #760031; color: #fff; }
-}
+		.service-card:hover { transform: translateY(-7px); background: #760031; color: #fff; }
+	}
 	.service-number { font-size: 12px; font-weight: 900; border: 1px solid currentColor; border-radius: 50%; width: 38px; height: 38px; display: grid; place-items: center; }
 	.service-card h3 { font-family: Georgia, serif; font-size: 36px; letter-spacing: -.03em; margin: 52px 0 16px; font-weight: 500; }
 	.service-card > p { max-width: 480px; font-size: 17px; line-height: 1.5; }
 	.service-card ul { list-style: none; display: flex; gap: 7px; flex-wrap: wrap; padding: 0; margin: 26px 0 0; }
 	.service-card li { border: 1px solid currentColor; border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 800; }
 	.card-arrow { position: absolute; right: 28px; top: 28px; font-size: 30px; }
-.case-featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 60px; }
-.case-group { margin-top: 50px; }
-.case-group:first-of-type { margin-top: 0; }
-.case-group-heading { text-transform: uppercase; font-size: 12px; font-weight: 900; letter-spacing: 1.5px; margin: 0 0 20px; }
-.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
-details.case-card { position: relative; border: 2px solid #760031; border-radius: 2px; background: #fffaf3; padding: 22px; }
-details.case-card:nth-child(3n) { background: #ff6060; }
-.case-card-featured { padding: 32px; min-height: 260px; }
-.case-featured-grid .case-card-featured:nth-child(2) { background: #ff6060; }
+	.who { padding-top: 20px; padding-bottom: 40px; }
+	.who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+	.who-card { padding: 32px; border: 2px solid #760031; border-radius: 2px; background: #fffaf3; min-height: 280px; }
+	.who-card:nth-child(1) { background: #760031; color: #fff; }
+	.who-card:nth-child(2) { background: #feec41; }
+	.who-card h3 { font-family: Georgia, serif; font-size: 30px; letter-spacing: -.03em; margin: 44px 0 14px; font-weight: 500; }
+	.who-card p { margin: 0; font-size: 17px; line-height: 1.5; }
 
-details.case-card summary { list-style: none; cursor: pointer; position: relative; padding-right: 34px; }
-details.case-card summary::-webkit-details-marker { display: none; }
-details.case-card summary::marker { content: ''; }
+	.case-featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 60px; }
+	.case-group { margin-top: 50px; }
+	.case-group:first-of-type { margin-top: 0; }
+	.case-group-heading { text-transform: uppercase; font-size: 12px; font-weight: 900; letter-spacing: 1.5px; margin: 0 0 20px; }
+	.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
-.case-badge { display: inline-block; font-size: 10px; font-weight: 900; letter-spacing: .6px; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; margin-bottom: 14px; border: 2px solid #760031; background: #760031; color: #fff; }
-.case-badge.badge-example, .case-badge.badge-in-development { background: transparent; color: #760031; border-style: dashed; }
+	details.case-card { position: relative; border: 2px solid #760031; border-radius: 2px; background: #fffaf3; padding: 22px; }
+	details.case-card:nth-child(3n) { background: #ff6060; }
+	.case-card-featured { padding: 32px; min-height: 260px; }
+	.case-featured-grid .case-card-featured:nth-child(2) { background: #ff6060; }
 
-.case-indicator { position: absolute; top: 2px; right: 0; font-size: 20px; transition: transform .2s ease; }
-details.case-card[open] .case-indicator { transform: rotate(45deg); }
+	details.case-card summary { list-style: none; cursor: pointer; position: relative; padding-right: 34px; }
+	details.case-card summary::-webkit-details-marker { display: none; }
+	details.case-card summary::marker { content: ''; }
 
-details.case-card h3, details.case-card h4 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.03em; margin: 0 0 10px; }
-details.case-card h3 { font-size: 28px; }
-details.case-card h4 { font-size: 19px; }
-details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.5; }
-.case-card-featured summary p { font-size: 16px; }
+	.case-badge { display: inline-block; font-size: 10px; font-weight: 900; letter-spacing: .6px; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; margin-bottom: 14px; border: 2px solid #760031; background: #760031; color: #fff; }
+	.case-badge.badge-example, .case-badge.badge-in-development { background: transparent; color: #760031; border-style: dashed; }
 
-.case-tags { list-style: none; display: flex; gap: 6px; flex-wrap: wrap; padding: 0; margin: 0; }
-.case-tags li { border: 1px solid currentColor; border-radius: 999px; padding: 5px 10px; font-size: 10px; font-weight: 800; }
+	.case-indicator { position: absolute; top: 2px; right: 0; font-size: 20px; transition: transform .2s ease; }
+	details.case-card[open] .case-indicator { transform: rotate(45deg); }
 
-.case-full { margin: 18px 0 0; padding-top: 18px; border-top: 2px solid #760031; font-size: 14px; line-height: 1.6; }
+	details.case-card h3, details.case-card h4 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.03em; margin: 0 0 10px; }
+	details.case-card h3 { font-size: 28px; }
+	details.case-card h4 { font-size: 19px; }
+	details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.5; }
+	.case-card-featured summary p { font-size: 16px; }
 
+	.case-tags { list-style: none; display: flex; gap: 6px; flex-wrap: wrap; padding: 0; margin: 0; }
+	.case-tags li { border: 1px solid currentColor; border-radius: 999px; padding: 5px 10px; font-size: 10px; font-weight: 800; }
+
+	.case-full { margin: 18px 0 0; padding-top: 18px; border-top: 2px solid #760031; font-size: 14px; line-height: 1.6; }
+
+	.more-cases { margin-top: 50px; }
+	.more-cases > summary { list-style: none; cursor: pointer; display: inline-flex; padding: 15px 22px; border: 2px solid #760031; border-radius: 999px; font-weight: 800; font-size: 14px; transition: transform .2s ease, box-shadow .2s ease; }
+	.more-cases > summary::-webkit-details-marker { display: none; }
+	.more-cases > summary::marker { content: ''; }
+	.more-cases > summary:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 5px 7px 0 #ff6060; }
+	.more-cases .more-close { display: none; }
+	.more-cases[open] .more-open { display: none; }
+	.more-cases[open] .more-close { display: inline; }
+	.more-cases[open] > summary { margin-bottom: 40px; }
 
 	.manifesto { min-height: 610px; background: #760031; color: #fff; display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; padding-left: max(24px, calc((100vw - 1240px) / 2)); padding-right: max(24px, calc((100vw - 1240px) / 2)); overflow: hidden; }
 	.manifesto-cat { align-self: end; width: min(100%, 460px); height: auto; overflow: visible; filter: drop-shadow(-10px 10px 0 rgba(0, 0, 0, .16)); }
@@ -676,8 +735,10 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 
 	.contact { background: #feec41; text-align: center; position: relative; padding-left: 24px; padding-right: 24px; overflow: hidden; }
 	.contact-spark { font-size: 46px; color: #d51c39; }
+	.contact .kicker { max-width: 640px; margin-inline: auto; line-height: 1.6; }
 	.contact h2 { font-size: clamp(70px, 10vw, 150px); line-height: .9; font-weight: 500; margin: 24px 0 30px; }
 	.contact > p:not(.kicker) { font-size: 19px; max-width: 610px; line-height: 1.55; margin: 0 auto 45px; }
+	.contact > p.contact-sv { font-size: 15px; font-style: italic; margin-top: -25px; }
 	.email-link { display: inline-flex; gap: 25px; font-size: clamp(24px, 4vw, 52px); font-family: Georgia, serif; text-underline-offset: 9px; text-decoration-thickness: 2px; }
 	.contact-links { width: min(100%, 1240px); margin: 100px auto 0; padding-top: 22px; border-top: 2px solid #760031; display: flex; justify-content: space-between; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .8px; }
 	footer { background: #760031; color: #fff; padding: 38px max(24px, calc((100vw - 1240px) / 2)); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; font-size: 12px; }
@@ -686,8 +747,14 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 	footer > p:last-child { text-align: right; }
 	.footer-logo :global(.logo-mark) { --logo-ink: #fff; width: 36px; }
 
+	@media (max-width: 1100px) {
+		nav { gap: 24px; }
+	}
+
 	@media (max-width: 900px) {
 		.case-featured-grid, .case-grid { grid-template-columns: repeat(2, 1fr); }
+		.who-grid { grid-template-columns: 1fr; }
+		.who-card { min-height: auto; }
 		nav a:not(.nav-cta) { display: none; }
 		.hero { grid-template-columns: 1fr; padding-top: 80px; }
 		.hero-art { min-height: 590px; width: min(100%, 590px); margin: 0 auto; }
@@ -709,7 +776,7 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 		.logo :global(.logo-mark) { width: 36px; }
 		.nav-cta { padding: 11px 14px; }
 		.hero { min-height: auto; padding-top: 70px; padding-bottom: 75px; }
-		h1 { font-size: clamp(58px, 19vw, 82px); }
+		h1 { font-size: clamp(50px, 15vw, 72px); }
 		.hero-actions { align-items: flex-start; flex-direction: column; }
 		.hero-art { min-height: 430px; margin-top: 25px; }
 		.legal-card { width: 130px; height: 176px; padding: 11px; left: 0; }
@@ -722,6 +789,8 @@ details.case-card summary p { margin: 0 0 16px; font-size: 15px; line-height: 1.
 		.service-card { min-height: 320px; padding: 25px; }
 		.service-card:nth-child(3) { background: #fffaf3; }
 		.service-card:nth-child(4) { background: #ff6060; }
+		.service-card h3 { font-size: 30px; }
+		.who-card { padding: 25px; }
 		.principle-list article { grid-template-columns: 50px 1fr; }
 		.principle-list article p { grid-column: 2; }
 		.manifesto { min-height: 730px; }
