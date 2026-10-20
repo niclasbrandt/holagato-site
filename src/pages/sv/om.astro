@@ -1,0 +1,16 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import AboutBlock from '../../components/AboutBlock.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import Principles from '../../components/Principles.astro';
+---
+<PageLayout lang="sv" page="about" title="Om Helena – Hola Gato" description="Jurist och tekniknörd med rak kommunikation. 15 år där juridik, teknik och affär möts.">
+	<AboutBlock lang="sv" />
+	<Manifesto lang="sv" />
+	<Principles lang="sv" />
+	<section class="section-shell section-space cv-teaser">
+		<p class="kicker">CV</p>
+		<p>Hela min erfarenhet, från tingsrätten till Lextopia, finns på den engelska sidan.</p>
+		<a class="button button-dark" href="/about#cv" hreflang="en">Se CV (på engelska) <span>↗︎</span></a>
+	</section>
+</PageLayout>

@@ -1,0 +1,10 @@
+---
+// Omdömen. Citaten finns i data/content.ts → testimonials (på engelska).
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Testimonials from '../../components/Testimonials.astro';
+---
+<PageLayout lang="sv" page="testimonials" title="Omdömen – Hola Gato" description="Vad ledare jag har jobbat med säger om att jobba med Helena.">
+	<PageIntro kicker="Vänliga ord" title="Någon man litar på" em="för att reda ut saker." text="Citat från några av de fantastiska människor jag haft förmånen att jobba med." />
+	<Testimonials lang="sv" showHeading={false} />
+</PageLayout>

@@ -1,0 +1,33 @@
+---
+// Full services list with anchors (#ai-leadership etc.) and a link to pricing.
+import { services, type Lang } from '../data/content';
+import { routes } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const l = {
+	en: { forWhom: 'For', youGet: 'What you get', format: 'Format', price: 'See pricing', talk: 'Talk to me about this' },
+	sv: { forWhom: 'För', youGet: 'Det här får ni', format: 'Format', price: 'Se priser', talk: 'Prata med mig om det här' },
+}[lang];
+---
+<section class="service-detail-list section-shell">
+	{services[lang].map((s, i) => (
+		<article id={s.id} class:list={['service-detail', { alt: i % 2 === 1 }]}>
+			<div class="service-detail-head">
+				<div class="service-number">{s.number}</div>
+				<h2>{s.title}</h2>
+				<ul class="case-tags">{s.tags.map((tag) => <li>{tag}</li>)}</ul>
+			</div>
+			<div class="service-detail-body">
+				<p class="service-lead">{s.text}</p>
+				<dl>
+					<dt>{l.forWhom}</dt><dd>{s.forWhom}</dd>
+					<dt>{l.youGet}</dt><dd><ul>{s.youGet.map((g) => <li>{g}</li>)}</ul></dd>
+					<dt>{l.format}</dt><dd>{s.format}</dd>
+				</dl>
+				<div class="service-actions">
+					<a class="button button-dark" href={routes[lang].pricing}>{l.price} <span>↗︎</span></a>
+					<a class="text-link" href="#contact">{l.talk} <span>↓︎</span></a>
+				</div>
+			</div>
+		</article>
+	))}
+</section>

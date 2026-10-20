@@ -1,0 +1,47 @@
+---
+// Photo + "Hi, I'm Helena".
+import { Image } from 'astro:assets';
+import helenaPhoto from '../assets/helena.png';
+import type { Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = {
+	en: {
+		alt: 'Helena, founder of Hola Gato', badge: 'say hola!', kicker: 'The human behind the work',
+		h1: 'Hi, I’m', h2: 'Lawyer, tech nerd,', h3: 'straight talker.',
+		lead: 'I started Hola Gato to help organizations get things off the ground – AI, compliance, big decisions – without losing their footing on data, law or people.',
+		p: [
+			'I’m a lawyer at heart, but I’m at my best leading change: projects, people, negotiations, rollouts. And unusually for a lawyer, I have a genuinely technical mind, which means I can sit inside a build process while it’s happening, instead of showing up afterward with a list of demands.',
+			'My view of a well-run organization is that it should become a self-playing piano: clear processes, automation wherever it makes sense, and enough freedom inside the right guardrails that everyone can do their job without hitting a bottleneck.',
+		],
+		offLabel: 'OFF THE CLOCK',
+		off: 'Off the clock, you’ll usually find me lifting weights, out in the woods, or on a bike. Crime novels are the reset button – Agatha Christie is non-negotiable over the holidays – and the rest of the time goes to concerts, travel, and keeping up with the kids.',
+	},
+	sv: {
+		alt: 'Helena, grundare av Hola Gato', badge: 'säg hola!', kicker: 'Människan bakom jobbet',
+		h1: 'Hej, jag heter', h2: 'Jurist och tekniknörd', h3: 'med rak kommunikation.',
+		lead: 'Jag startade Hola Gato för att hjälpa organisationer att få saker att lyfta – AI, compliance, stora beslut – utan att tappa fotfästet kring data, juridik eller människor.',
+		p: [
+			'Jag är jurist i grunden, men som bäst när jag leder förändring: projekt, människor, förhandlingar, utrullningar. Och ovanligt för en jurist har jag ett tekniskt sinne, vilket gör att jag kan vara med medan något byggs, i stället för att dyka upp efteråt med en lista med krav.',
+			'Min bild av en välfungerande organisation är ett självspelande piano: tydliga processer, automation där det är rimligt och tillräckligt med frihet inom rätt ramar för att alla ska kunna göra sitt jobb utan flaskhalsar.',
+		],
+		offLabel: 'PÅ FRITIDEN',
+		off: 'På fritiden lyfter jag skrot, är ute i skogen eller sitter på cykeln. Deckare är min återställningsknapp – Agatha Christie är ett måste över helgerna – och resten av tiden går till konserter, resor och att hänga med barnen.',
+	},
+}[lang];
+---
+<section id="about" class="about section-shell section-space">
+	<div class="portrait-placeholder">
+		<Image src={helenaPhoto} alt={t.alt} class="portrait-photo" width={470} height={540} />
+		<div class="hello-badge">{t.badge}<br />↙︎</div>
+	</div>
+	<div class="about-copy">
+		<p class="kicker">{t.kicker}</p>
+		<h2>{t.h1} <span>Helena.</span><br />{t.h2}<br />{t.h3}</h2>
+		<p class="lead">{t.lead}</p>
+		{t.p.map((p) => <p>{p}</p>)}
+		<div class="personal-note">
+			<span>{t.offLabel}</span>
+			<p>{t.off}</p>
+		</div>
+	</div>
+</section>

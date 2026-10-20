@@ -1,0 +1,11 @@
+---
+// Big heading at the top of each subpage.
+interface Props { kicker: string; title: string; em: string; text?: string }
+const { kicker, title, em, text } = Astro.props;
+---
+<section class="page-intro section-shell">
+	<p class="eyebrow"><span></span> {kicker}</p>
+	<h1>{title}<br /><em>{em}</em></h1>
+	{text && <p class="hero-intro">{text}</p>}
+	<slot />
+</section>

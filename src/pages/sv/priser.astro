@@ -1,0 +1,10 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PricingBlock from '../../components/PricingBlock.astro';
+import { pricing } from '../../data/content';
+---
+<PageLayout lang="sv" page="pricing" title="Priser – Hola Gato" description="Prenumeration från 24 000 kr i månaden, timbank, utbildning och projekt till fast pris. Alla priser exklusive moms.">
+	<PageIntro kicker="Priser" title="Tydliga priser," em="inga överraskningar." text={pricing.sv.intro} />
+	<PricingBlock lang="sv" />
+</PageLayout>

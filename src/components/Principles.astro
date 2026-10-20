@@ -1,0 +1,16 @@
+---
+import { principles, type Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+---
+<section class="principles section-shell section-space">
+	<p class="kicker">{lang === 'en' ? 'How I work' : 'Så jobbar jag'}</p>
+	<div class="principle-list">
+		{principles[lang].map(([title, text], index) => (
+			<article>
+				<span>0{index + 1}</span>
+				<h3>{title}</h3>
+				<p>{text}</p>
+			</article>
+		))}
+	</div>
+</section>

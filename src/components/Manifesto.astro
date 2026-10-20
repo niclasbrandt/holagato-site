@@ -1,0 +1,16 @@
+---
+import ManifestoCat from './ManifestoCat.astro';
+import type { Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = {
+	en: { kicker: 'My point of view', quote: '“The best legal work doesn’t slow good ideas down. It gives them', em: 'somewhere to go.”' },
+	sv: { kicker: 'Min syn', quote: '”Bra juridik bromsar inte goda idéer. Den ger dem', em: 'någonstans att ta vägen.”' },
+}[lang];
+---
+<section class="manifesto section-space">
+	<ManifestoCat />
+	<div class="manifesto-copy">
+		<p class="kicker light">{t.kicker}</p>
+		<blockquote>{t.quote} <em>{t.em}</em></blockquote>
+	</div>
+</section>

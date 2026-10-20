@@ -1,0 +1,42 @@
+---
+// Top bar: logo, menu, language switch and "Let's talk".
+// On phones the links fold into a "Menu" button.
+import LogoMark from './LogoMark.astro';
+import { ui, routes, hasTranslation, type PageKey } from '../i18n/ui';
+import type { Lang } from '../data/content';
+
+interface Props { lang: Lang; page: PageKey; altHref?: string }
+const { lang, page, altHref } = Astro.props;
+const t = ui[lang];
+const r = routes[lang];
+const other: Lang = lang === 'en' ? 'sv' : 'en';
+const switchHref = altHref ?? (hasTranslation[page] ? routes[other][page] : routes[other].home);
+---
+<header class="site-header">
+	<a class="logo" href={r.home} aria-label={t.homeAria}>
+		<LogoMark />
+		<span>hola gato</span>
+	</a>
+
+	<nav aria-label={lang === 'en' ? 'Main navigation' : 'Huvudmeny'}>
+		{t.nav.map((item) => (
+			<a href={r[item.key as PageKey]} aria-current={item.key === page ? 'page' : undefined} class:list={{ active: item.key === page }}>
+				{item.label}{'note' in item && <small class="nav-note">{item.note}</small>}
+			</a>
+		))}
+		<a class="lang-switch" href={switchHref} hreflang={other} lang={other}>{other.toUpperCase()}<span class="sr-only"> – {t.switchLabel}</span></a>
+		<a href="#contact" class="nav-cta">{t.cta} <span>↗︎</span></a>
+	</nav>
+
+	<details class="mobile-nav">
+		<summary>{t.menu} <span aria-hidden="true">☰</span></summary>
+		<div class="mobile-nav-panel">
+			<a href={r.home} aria-current={page === 'home' ? 'page' : undefined}>{lang === 'en' ? 'Home' : 'Hem'}</a>
+			{t.nav.map((item) => (
+				<a href={r[item.key as PageKey]} aria-current={item.key === page ? 'page' : undefined}>{item.label}{'note' in item && <small class="nav-note">{item.note}</small>}</a>
+			))}
+			<a href={switchHref} hreflang={other} lang={other}>{t.switchLabel}</a>
+			<a href="#contact" class="nav-cta">{t.cta} <span>↗︎</span></a>
+		</div>
+	</details>
+</header>

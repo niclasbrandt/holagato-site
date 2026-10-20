@@ -1,0 +1,41 @@
+---
+// Wraps every page: your existing Layout + header, contact, footer and styles.
+import Layout from './Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import ContactSection from '../components/ContactSection.astro';
+import PupilScript from '../components/PupilScript.astro';
+import { routes, hasTranslation, type PageKey } from '../i18n/ui';
+import type { Lang } from '../data/content';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	lang: Lang;
+	page: PageKey;
+	altHref?: string; // only needed for pages outside the normal route map
+	showContact?: boolean;
+}
+const { title, description, lang, page, altHref, showContact = true } = Astro.props;
+const site = 'https://holagato.se';
+const other: Lang = lang === 'en' ? 'sv' : 'en';
+const abs = (path: string) => new URL(path.endsWith('/') ? path : `${path}/`, site).href;
+const selfHref = abs(Astro.url.pathname);
+const otherPath = altHref ?? (hasTranslation[page] ? routes[other][page] : null);
+---
+<Layout title={title} description={description} lang={lang}>
+	<Fragment slot="head">
+		<link rel="canonical" href={selfHref} />
+		<link rel="alternate" hreflang={lang} href={selfHref} />
+		{otherPath && <link rel="alternate" hreflang={other} href={abs(otherPath)} />}
+		{otherPath && <link rel="alternate" hreflang="x-default" href={lang === 'en' ? selfHref : abs(otherPath)} />}
+	</Fragment>
+	<SiteHeader lang={lang} page={page} altHref={altHref} />
+	<main id="top">
+		<slot />
+		{showContact && <ContactSection lang={lang} />}
+	</main>
+	<SiteFooter lang={lang} />
+	<PupilScript />
+</Layout>

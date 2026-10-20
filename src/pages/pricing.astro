@@ -1,0 +1,10 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PricingBlock from '../components/PricingBlock.astro';
+import { pricing } from '../data/content';
+---
+<PageLayout lang="en" page="pricing" title="Pricing – Hola Gato" description="Subscription from SEK 24,000 a month, hour bank, training and fixed-price projects. All prices excluding VAT.">
+	<PageIntro kicker="Pricing" title="Clear prices," em="no surprises." text={pricing.en.intro} />
+	<PricingBlock lang="en" />
+</PageLayout>

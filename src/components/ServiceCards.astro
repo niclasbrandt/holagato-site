@@ -1,0 +1,17 @@
+---
+// The five service cards. Each card links to its section on the services page.
+import { services, type Lang } from '../data/content';
+import { routes } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+---
+<div class="service-grid">
+	{services[lang].map((s) => (
+		<a class="service-card service-card-link" href={`${routes[lang].services}#${s.id}`}>
+			<div class="service-number">{s.number}</div>
+			<h3>{s.title}</h3>
+			<p>{s.text}</p>
+			<ul>{s.tags.map((tag) => <li>{tag}</li>)}</ul>
+			<span class="card-arrow">↗︎</span>
+		</a>
+	))}
+</div>

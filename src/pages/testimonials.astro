@@ -1,0 +1,10 @@
+---
+// Testimonials. Quotes live in data/content.ts → testimonials.
+import PageLayout from '../layouts/PageLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Testimonials from '../components/Testimonials.astro';
+---
+<PageLayout lang="en" page="testimonials" title="Testimonials – Hola Gato" description="What leaders I have worked with say about working with Helena.">
+	<PageIntro kicker="Kind words" title="Trusted to make" em="things clearer." text="Quotes from a few of the amazing people I’ve had the privilege to work with." />
+	<Testimonials lang="en" showHeading={false} />
+</PageLayout>

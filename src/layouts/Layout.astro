@@ -2,16 +2,18 @@
 interface Props {
 	title?: string;
 	description?: string;
+	lang?: 'en' | 'sv';
 }
 
 const {
 	title = 'Hola Gato — Legal consulting for tech',
 	description = 'Clear, human legal support for technology companies and product teams.',
+	lang = 'en',
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,6 +26,7 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<slot name="head" />
 	</head>
 	<body>
 		<slot />

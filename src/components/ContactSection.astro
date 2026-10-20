@@ -1,0 +1,19 @@
+---
+// The yellow "Let's untangle it" block, shown at the bottom of every page.
+import { ui } from '../i18n/ui';
+import type { Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+const c = ui[lang].contact;
+---
+<section id="contact" class="contact section-space">
+	<div class="contact-spark" aria-hidden="true">✦︎</div>
+	<p class="kicker">{c.kicker}</p>
+	<h2>{c.heading}</h2>
+	<p>{c.text}</p>
+	<p class="contact-sv" lang={lang === 'en' ? 'sv' : 'en'}>{c.langNote}</p>
+	<a class="email-link" href="mailto:helena@holagato.se">helena@holagato.se <span>↗︎</span></a>
+	<div class="contact-links">
+		<span>LinkedIn · <a href="https://www.linkedin.com/in/helenabrandt/" target="_blank" rel="noopener noreferrer">{c.linkedin} ↗︎</a></span>
+		<span>{c.based}</span>
+	</div>
+</section>

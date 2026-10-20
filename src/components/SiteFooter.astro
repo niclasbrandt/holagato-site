@@ -1,0 +1,22 @@
+---
+// Footer: logo, company details, links to general terms and privacy policy (PDF).
+import LogoMark from './LogoMark.astro';
+import { ui, routes, docs } from '../i18n/ui';
+import type { Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = ui[lang];
+---
+<footer>
+	<a class="logo footer-logo" href={routes[lang].home} aria-label={t.homeAria}>
+		<LogoMark />
+		<span>hola gato</span>
+	</a>
+	<div class="footer-center">
+		<p class="footer-org">Hola Gato AB · Org.nr 559587-4834</p>
+		<p>{t.tagline}</p>
+	</div>
+	<div class="footer-right">
+		<p class="footer-links"><a href={docs[lang].terms} target="_blank" rel="noopener">{t.terms}</a> · <a href={docs[lang].privacy} target="_blank" rel="noopener">{t.privacy}</a></p>
+		<p>© {new Date().getFullYear()} Hola Gato</p>
+	</div>
+</footer>

@@ -1,0 +1,81 @@
+---
+// Price list. All text and numbers live in data/content.ts → pricing.
+import { pricing, type Lang } from '../data/content';
+import { docs } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const p = pricing[lang];
+const mail = 'mailto:helena@holagato.se';
+---
+<section class="pricing section-shell">
+
+	<article class="price-section" id="subscription">
+		<p class="kicker">01</p>
+		<h2>{p.subscription.title}</h2>
+		<p class="price-lead">{p.subscription.text}</p>
+		<div class="price-table-wrap">
+			<table class="price-tiers">
+				<thead><tr>{p.subscription.headers.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+				<tbody>
+					{p.subscription.rows.map((row) => (
+						<tr>
+							<th scope="row">{row[0]}</th>
+							<td data-label={p.subscription.headers[1]}>{row[1]}</td>
+							<td data-label={p.subscription.headers[2]}>{row[2]}</td>
+							<td data-label={p.subscription.headers[3]} class="price">{row[3]}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+		<p>{p.subscription.typical}</p>
+		<ul class="price-terms">{p.subscription.terms.map((t) => <li>{t}</li>)}</ul>
+	</article>
+
+	<div class="price-grid">
+		<article class="price-card" id="hour-bank">
+			<p class="kicker">02</p>
+			<h3>{p.hourBank.title}</h3>
+			<p>{p.hourBank.text}</p>
+			<p class="price">{p.hourBank.price}</p>
+			<p class="price-unit">{p.hourBank.priceNote}</p>
+			<p class="price-note">{p.hourBank.note}</p>
+		</article>
+		<article class="price-card" id="training">
+			<p class="kicker">03</p>
+			<h3>{p.training.title}</h3>
+			<p>{p.training.text}</p>
+			<p class="price">{p.training.price}</p>
+			<p class="price-unit">{p.training.priceNote}</p>
+			<p class="price-note">{p.training.note}</p>
+			<a class="text-link" href={mail}>{p.emailCta} <span>↗︎</span></a>
+		</article>
+	</div>
+
+	<article class="price-section" id="projects">
+		<p class="kicker">04</p>
+		<h2>{p.projects.title}</h2>
+		<p class="price-lead">{p.projects.text}</p>
+		<div class="price-table-wrap">
+			<table class="price-tiers price-projects">
+				<thead><tr>{p.projects.headers.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+				<tbody>
+					{p.projects.rows.map((row) => (
+						<tr><th scope="row">{row[0]}</th><td data-label={p.projects.headers[1]} class="price">{row[1]}</td></tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+		<p class="price-custom">{p.projects.cta}</p>
+		<a class="button button-dark" href={mail}>{p.emailCta} <span>↗︎</span></a>
+	</article>
+
+	<p class="kicker price-section-label">{p.goodToKnowTitle}</p>
+	<ul class="good-to-know">
+		{p.goodToKnow.map(([label, text], i) => (
+			<li>
+				<b>{label}:</b> {text}
+				{i === p.goodToKnow.length - 1 && <> <a href={docs[lang].terms} target="_blank" rel="noopener">{p.termsLink} ↗︎</a></>}
+			</li>
+		))}
+	</ul>
+</section>

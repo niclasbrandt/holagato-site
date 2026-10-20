@@ -1,0 +1,17 @@
+---
+// One clickable case study card. featured = the big version.
+import type { CaseItem } from '../data/cases';
+interface Props { item: CaseItem; featured?: boolean }
+const { item, featured = false } = Astro.props;
+const Heading = featured ? 'h3' : 'h4';
+---
+<details class:list={['case-card', { 'case-card-featured': featured }]}>
+	<summary>
+		<span class={`case-badge badge-${item.badge.toLowerCase().replace(/\s+/g, '-')}`}>{item.badge}</span>
+		<span class="case-indicator">↗︎</span>
+		<Heading>{item.title}</Heading>
+		<p>{item.teaser}</p>
+		<ul class="case-tags">{item.tags.map((tag) => <li>{tag}</li>)}</ul>
+	</summary>
+	<p class="case-full">{item.full}</p>
+</details>

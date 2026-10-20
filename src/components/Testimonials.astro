@@ -1,0 +1,25 @@
+---
+import { testimonials, type Lang } from '../data/content';
+const { lang, showHeading = true } = Astro.props as { lang: Lang; showHeading?: boolean };
+const h = {
+	en: { kicker: 'Kind words', title: 'Trusted to make', em: 'things clearer.', text: 'Quotes from a few of the amazing people I’ve had the privilege to work with.' },
+	sv: { kicker: 'Vänliga ord', title: 'Någon man litar på', em: 'för att reda ut saker.', text: 'Citat från några av de fantastiska människor jag haft förmånen att jobba med.' },
+}[lang];
+---
+<section class="testimonials section-shell section-space" style={showHeading ? undefined : "padding-top: 0"}>
+	{showHeading && (
+		<div class="section-heading compact">
+			<div><p class="kicker">{h.kicker}</p><h2>{h.title}<br /><em>{h.em}</em></h2></div>
+			<p>{h.text}</p>
+		</div>
+	)}
+	<div class="quote-grid">
+		{testimonials.map((q) => (
+			<figure lang="en">
+				<div class="quote-mark">“</div>
+				<blockquote>{q.quote}</blockquote>
+				<figcaption><b>{q.name}</b><span>{q.role}</span></figcaption>
+			</figure>
+		))}
+	</div>
+</section>

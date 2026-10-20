@@ -1,0 +1,23 @@
+---
+import { audiences, type Lang } from '../data/content';
+const { lang } = Astro.props as { lang: Lang };
+const h = {
+	en: { kicker: 'Who I work with', title: 'Not just tech.', em: 'Organizations that run on expertise.', text: 'My background is broad: courtroom, law firm, SaaS scale-ups and legal innovation. I’ve also trained leaders from manufacturing to regional business. If your organization runs on knowledge, data and trust, we’ll speak the same language.' },
+	sv: { kicker: 'Vilka jag jobbar med', title: 'Inte bara tech.', em: 'Organisationer som lever på kunskap.', text: 'Jag har en bred bakgrund: domstol, advokatbyrå, SaaS-bolag och juridisk innovation. Jag har också utbildat ledare från tillverkningsindustri till regionalt näringsliv. Lever er organisation på kunskap, data och förtroende talar vi samma språk.' },
+}[lang];
+---
+<section id="who" class="who section-shell">
+	<div class="section-heading compact">
+		<div><p class="kicker">{h.kicker}</p><h2>{h.title}<br /><em>{h.em}</em></h2></div>
+		<p>{h.text}</p>
+	</div>
+	<div class="who-grid">
+		{audiences[lang].map((item) => (
+			<article class="who-card">
+				<div class="service-number">{item.number}</div>
+				<h3>{item.title}</h3>
+				<p>{item.text}</p>
+			</article>
+		))}
+	</div>
+</section>
